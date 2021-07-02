@@ -1,0 +1,31 @@
+* {
+  font-family: 'Spoqa Han Sans Neo', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  
+  background-color: var(--color-background);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.inner,
+.container {
+  max-width: var(--container-width);
+  margin: auto;
+  padding: 0 var(--container-padding-horizontal);
+}
+
+.container>:first-child {
+  margin-top: 56px;
+}
+
+.container>:first-child.no-top-inset {
+  margin-top: 0;
+}

@@ -1,0 +1,78 @@
+.hero-section {
+  display: flex;
+  position: relative;
+  height: calc(100vh - 112px);
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.hero-section .hero-title-field h4 {
+  font-weight: normal;
+  font-size: 16px;
+  margin: 0;
+}
+
+.hero-section .hero-title-field h2 {
+  font-weight: bold;
+  font-size: 32px;
+  margin: 8px 0 0 0;
+}
+
+.hero-section .hero-title-field h2>a {
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: 8px;
+  text-decoration-color: var(--color-base);
+  transition-duration: .2s;
+}
+
+.hero-section .hero-title-field h2>a:hover,
+.hero-section .hero-title-field h2>a:focus {
+  background-color: var(--color-base);
+  border-radius: 2px;
+  text-decoration-color: transparent;
+}
+
+.hero-section .hero-title-field h2>a:active {
+  background-color: var(--color-base-dimmed);
+}
+
+
+.hero-section .hero-social-items {
+  margin: 24px 0 0 0;
+}
+
+.hero-section .hero-social-items>* {
+  margin-right: 8px;
+}
+.hero-section .hero-social-items>*:last-child {
+  margin-right: 0;
+}
+
+.hero-section .hero-social-item {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.hero-section .hero-social-item>span {
+  line-height: 32px;
+}
+
+.hero-section .hero-social-icon {
+  margin: -4px 8px -4px -8px;
+  font-size: 24px;
+  line-height: 16px;
+}
+
+.hero-section .hero-img-holder {
+  position: absolute;
+  right: 0;
+  margin-right: 32px;
+}
+
+.section-title {
+  padding: 16px 0;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
