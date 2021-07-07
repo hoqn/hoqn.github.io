@@ -3,18 +3,18 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 'hogeek.'
-subtitle: 'ggggg'
-description: 'dddd'
+title: 전호균의 블로그
+subtitle: 
+description: 전호균의 블로그입니다. 개발과 UI/UX 디자인을 주로 다룹니다.
 keywords:
-author: Hogyun Jeon
+author: 전호균
 language: ko
 timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
-permalink: :year/:month/:day/:title/
+url: http://hoqn.github.io
+permalink: :year/:title/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -45,7 +45,7 @@ relative_link: false
 future: true
 highlight:
   enable: true
-  line_number: true
+  line_number: false
   auto_detect: false
   tab_replace: ''
   wrap: true
@@ -78,7 +78,7 @@ meta_generator: true
 ## Hexo uses Moment.js to parse and display date
 ## You can customize the date format as defined in
 ## http://momentjs.com/docs/#/displaying/format/
-date_format: YYYY-MM-DD
+date_format: YYYY년 MM월 DD일
 time_format: HH:mm:ss
 ## updated_option supports 'mtime', 'date', 'empty'
 updated_option: 'mtime'
@@ -104,3 +104,11 @@ theme: Hinaus
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+
+# Filtered Emoji
+## hexo-filter-emoji (https://github.com/theme-next/hexo-filter-emoji)
+emoji:
+  enable: true
+  className: gh-emoji
+  styles:
+  customEmojis:

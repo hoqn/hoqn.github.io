@@ -1,30 +1,21 @@
 ---
-title: 소개
+title: 紹介
+subtitle: ハイパーシード
 no_date: true
 ---
-
-:kr: 안녕하세요! 저는 **전호균**이라고 합니다.
-
-:uk: Hello! I am Hogyun Jeon. (Pronounce as 'ho-ghiun chon')
-Click here if you want to read this in English.
-
-:de: Hallo! Ich bin Hogyun Jeon. (Ausgesprochen als 'ho-gjun tschon')
-Klicken Sie hier, wenn Sie dies auf Deutsche Sprache lesen möchten.
-
-:fr: Bonjour! Je m'appelle Jeon Hogyun (Parole «ho-gui-un jon»)
 
 :jp: こんにちは。僕は「ジョン·ホギュン」（全·晧均)と申します。
 
 ---
 
-- 디자인🎨과 개발💻을 좋아하는 대학생입니다.
-- 주로 Android와 웹 프런트엔드를 다룹니다!
-- 서울 또는 전주에서 거주 및 활동하고 있습니다.
+- デザイン🎨と開発💻が好きな大学生です。
+- 主に「Android」と「Web Front-end」を扱っています！
+- ソウルまたは全州で居住·活動をしています。
 
 ### TMI
 
-- 프로그래밍 언어 중에선 Kotlin을 상당히 좋아합니다!
-- 더불어, Pug 템플릿 엔진의 문법도 정말 좋아합니다!
+- プログラミング言語のなかではKotlinがだいぶんすきです。
+- それに、Pug（テンプレートエンジン）も大好きです！
 
 ---
 

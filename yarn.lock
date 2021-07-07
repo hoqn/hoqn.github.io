@@ -631,6 +631,13 @@ hexo-cli@^4.0.0:
     resolve "^1.11.0"
     tildify "^2.0.0"
 
+hexo-filter-emoji@^2.2.2:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/hexo-filter-emoji/-/hexo-filter-emoji-2.2.2.tgz#08920149b76c764ebe3226d3ef7c9fe18f254008"
+  integrity sha512-/RE4HB5OPucFiy3ynT0AAdGpIwioVRhn74IvoAfL8I23DJK5gTRBwUDcu+Gx+O+U1OUXfwX2AkJtXVtEGVftng==
+  dependencies:
+    lodash "4.17.21"
+
 hexo-front-matter@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/hexo-front-matter/-/hexo-front-matter-2.0.0.tgz#03f39a9eedb16c5448dbb3bec7dff2c4e224006c"
@@ -950,7 +957,7 @@ lazy-cache@^1.0.3:
   resolved "https://registry.yarnpkg.com/lazy-cache/-/lazy-cache-1.0.4.tgz#a1d78fc3a50474cb80845d3b3b6e1da49a446e8e"
   integrity sha1-odePw6UEdMuAhF07O24dpJpEbo4=
 
-lodash@^4.17.4:
+lodash@4.17.21, lodash@^4.17.4:
   version "4.17.21"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==

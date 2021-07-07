@@ -6,7 +6,7 @@ no_date: true
 ## Production - Personal
 > **1인 개발**로 진행한 프로젝트 중 **프로덕션**을 목표로 했던 프로젝트
 
-<div class="card-grid-layout card-grid-col-2">
+<div class="card-grid-layout grid-col-2 grid-col-1-mobile">
 	<div class="card">
 		<div class="card-cover">
 			<img src="assets/img/t_phinedit.png"/>
@@ -59,7 +59,7 @@ no_date: true
 ## Design
 > 가상의 **콘셉트 디자인**을 진행한 프로젝트
 
-<div class="card-grid-layout card-grid-col-2">
+<div class="card-grid-layout  grid-col-2 grid-col-1-mobile">
 	<div class="card">
 		<div class="card-cover">
 			<img src="assets/img/t_kinogrim.png"/>
@@ -80,4 +80,3 @@ no_date: true
 		</div>
 	</div>
 </div>
-
