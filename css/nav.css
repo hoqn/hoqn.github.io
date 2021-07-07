@@ -5,7 +5,7 @@
 }
 
 :root[dark] {
-  --nav-color-background: #191a1df0;
+  --nav-color-background: #27292ef0;
   --nav-color-border: var(--color-background-dimmed);
   --nav-color-on-background: white;
 }
@@ -29,11 +29,21 @@ nav {
 
 nav .title {
   float: left;
-  font-family: 'Spoqa Han Sans Neo', sans-serif;
+  /*font-family: 'Spoqa Han Sans Neo', sans-serif;*/
+  font-family: 'roboto', sans-serif;
   font-weight: bold;
   font-size: 20px;
   color: var(--nav-color-on-background)!important;
   line-height: 56px;
+}
+
+nav .nav-hand {
+  position: absolute;
+  display: none;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
 }
 
 nav .nav-items {

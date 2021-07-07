@@ -1,4 +1,4 @@
-(() => {
+/*(() => {
     var navEl = document.getElementById("theme-nav");
     navEl.addEventListener('click', (e) => {
         if (window.innerWidth <= 600) {
@@ -26,4 +26,4 @@
             }
         }
     })
-})()
+})()*/

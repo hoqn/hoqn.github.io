@@ -1,3 +1,17 @@
+.markdown-body {
+  --color-h-octicon-link: #1b1f23;
+  --color-h-hover-oction-before: #24292e;
+
+  --dolor-hr: #dfe2e5;
+}
+
+html[dark] .markdown-body {
+  --color-h-octicon-link: #1b1f23;
+  --color-h-hover-oction-before: #24292e;
+
+  --dolor-hr: #205c97;
+}
+
 /* https://raw.githubusercontent.com/sindresorhus/github-markdown-css/main/github-markdown.css */
 
 .markdown-body .octicon {
@@ -23,7 +37,7 @@
 .markdown-body h4 .octicon-link,
 .markdown-body h5 .octicon-link,
 .markdown-body h6 .octicon-link {
-  color: #1b1f23;
+  color: var(--color-h-octicon-link);
   vertical-align: middle;
   visibility: hidden;
 }
@@ -61,7 +75,7 @@
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   line-height: 1.5;
-  color: #24292e;
+  color: var(--color-h-hover-octicon-before);
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
   font-size: 16px;
   line-height: 1.5;
@@ -155,7 +169,7 @@
   overflow: hidden;
   background: transparent;
   border: 0;
-  border-bottom: 1px solid #dfe2e5;
+  border-bottom: 1px solid var(--dolor-hr);
 }
 
 .markdown-body hr:after,

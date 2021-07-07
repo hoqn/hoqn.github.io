@@ -41,10 +41,12 @@
 
 .hero-section .hero-social-items {
   margin: 24px 0 0 0;
+  line-height: 44px;
 }
 
 .hero-section .hero-social-items>* {
   margin-right: 8px;
+  vertical-align: bottom;
 }
 .hero-section .hero-social-items>*:last-child {
   margin-right: 0;
@@ -63,6 +65,7 @@
   margin: -4px 8px -4px -8px;
   font-size: 24px;
   line-height: 16px;
+  vertical-align: middle;
 }
 
 .hero-section .hero-img-holder {
