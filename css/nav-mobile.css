@@ -6,6 +6,10 @@
     transition: height .6s cubic-bezier(0.86, 0, 0.18, 1);
   }
 
+  nav .inner {
+    height: 0;
+  }
+
   nav.open {
     height: 100%;
   }

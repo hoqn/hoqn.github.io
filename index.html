@@ -52,6 +52,12 @@
   
 <link rel="stylesheet" href="/css/nav-mobile.css">
 
+  
+<link rel="stylesheet" href="/css/categories.css">
+
+  
+<link rel="stylesheet" href="/css/pagination.css">
+
 
   
 <link rel="stylesheet" href="/css/markdown.css">
@@ -66,8 +72,22 @@
   <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
 
 <meta name="generator" content="Hexo 5.4.0"></head>
-  <body>
-    <nav id="theme-nav"><div class="inner"><a class="title ui-pressable-opacity" href="/"><!--img(img=theme.nav.logo)-->JeonHogyun ui Blog</a><a class="nav-hand ui-pressable-opacity"><div class="nav-hand-indicator"></div></a><div class="nav-items"><div class="nav-item"><a class="nav-link ui-pressable-opacity" href="/about">소개<span class="nav-indicator"></span></a></div><div class="nav-item"><a class="nav-link ui-pressable-opacity" href="/projects">프로젝트<span class="nav-indicator"></span></a></div><div class="nav-item"><a class="nav-link ui-pressable-opacity" href="/categories">카테고리<span class="nav-indicator"></span></a></div><div class="nav-item"><a class="nav-link ui-pressable-opacity" href="/archives">글<span class="nav-indicator"></span></a></div><div class="nav-item nav-item-icon"><a class="nav-link ui-pressable-opacity" target="_blank" rel="noopener" href="https://github.com/hoqn"><ion-icon name="logo-github"></ion-icon></a></div><div class="nav-item"><a class="nav-mode-switch ui-pressable-opacity"><ion-icon class="nav-dark" name="moon"></ion-icon><ion-icon class="nav-light" name="sunny"></ion-icon></a></div><!--if theme.nav.show_search_item//- partial('_partial/localsearch')
+  <body class="p-lo">
+    <style>
+      body.p-lo {
+        transition: none !important;
+        -o-transition: none !important;
+        -webkit-transition: none !important;
+        -ms-transition: none !important;
+        -moz-transition: none !important;
+      }
+    </style>
+    <script>
+      window.addEventListener('load', (e) => {
+        document.body.classList.remove('p-lo');
+      });
+    </script>
+    <nav id="theme-nav"><div class="inner"><a class="title ui-pressable-opacity" href="/"><!--img(img=theme.nav.logo)-->BLOGGY</a><a class="nav-hand ui-pressable-opacity"><div class="nav-hand-indicator"></div></a><div class="nav-items"><div class="nav-item"><a class="nav-link ui-pressable-opacity" href="/about">소개<span class="nav-indicator"></span></a></div><div class="nav-item"><a class="nav-link ui-pressable-opacity" href="/projects">프로젝트<span class="nav-indicator"></span></a></div><div class="nav-item"><a class="nav-link ui-pressable-opacity" href="/archives">글 목록<span class="nav-indicator"></span></a></div><div class="nav-item nav-item-icon"><a class="nav-link ui-pressable-opacity" target="_blank" rel="noopener" href="https://github.com/hoqn"><ion-icon name="logo-github"></ion-icon></a></div><div class="nav-item"><a class="nav-mode-switch ui-pressable-opacity"><ion-icon class="nav-dark" name="moon"></ion-icon><ion-icon class="nav-light" name="sunny"></ion-icon></a></div><!--if theme.nav.show_search_item//- partial('_partial/localsearch')
 .search-header
   span.search-icon
     i.fa.fa-search
@@ -87,84 +107,18 @@
 //.nav-item.nav-item-search
   a.nav-link
     ion-icon(name=icons.search)--></div></div></nav>
-    <!--<div class="container"> <% if (page.path == "index.html") { %>
- <div class="hero">
-   <div class="group">
-     <h2 class="sub"><%= config.subtitle %></h2>
-     <h2 class="large"><%= config.description %></h2>
-   </div>
- </div>
-
- <h2 class="section-title"><%= __('latest_posts') %></h2>
- <% } %>
-
- <div class="post-list">
-   <% page.posts.each(function (post) { %>
-   <article class="post-list-item">
-     <a href="<%- url_for(post.path) %>">
-       <% if (post.cover_image) { %>
-       <div class="cover-img">
-         <img src="<%= post.cover_image %>" alt="<%= post.cover_image_alt %>">
-       </div>
-       <% } %>
-       <div class="content">
-         <div class="title">
-           <%= post.title %>
-         </div>
-         <% if (theme.show_excerpt) { %>
-         <div class="excerpt">
-           <%- post.excerpt %>
-         </div>
-         <% } %>
-         <div class="time">
-           <% if (post.date.month() == 0) { %>
-           <span>January</span>
-           <% } %>
-           <% if (post.date.month() == 1) { %>
-           <span>February</span>
-           <% } %>
-           <% if (post.date.month() == 2) { %>
-           <span>March</span>
-           <% } %>
-           <% if (post.date.month() == 3) { %>
-           <span>April</span>
-           <% } %>
-           <% if (post.date.month() == 4) { %>
-           <span>May</span>
-           <% } %>
-           <% if (post.date.month() == 5) { %>
-           <span>June</span>
-           <% } %>
-           <% if (post.date.month() == 6) { %>
-           <span>July</span>
-           <% } %>
-           <% if (post.date.month() == 7) { %>
-           <span>August</span>
-           <% } %>
-           <% if (post.date.month() == 8) { %>
-           <span>September</span>
-           <% } %>
-           <% if (post.date.month() == 9) { %>
-           <span>October</span>
-           <% } %>
-           <% if (post.date.month() == 10) { %>
-           <span>November</span>
-           <% } %>
-           <% if (post.date.month() == 11) { %>
-           <span>December</span>
-           <% } %>
-           <span>&nbsp;<%- post.date.date() %>,&nbsp;</span>
-           <span><%- post.date.year() %></span>
-         </div>
-       </div>
-     </a>
-   </article>
-   <% }) %>
- </div>
-
- <%- partial('_partial/paginator') %>
-</div>
---><div class="container"><section class="hero-section"><!--.hero-img-holder: img(src="/theme-img/perseus-hero.svg")--><div class="hero-title-field"><h4>Hogyun Jeon's Development/Designing Blog</h4><h2><a href="/about">전호균</a>의 개발/디자인 블로그입니다.</h2></div><div class="hero-social-items"><a class="hero-social-name ui-button ui-primary" href="/about">@hoqn</a><a class="hero-social-item ui-button" target="_blank" rel="noopener" href="https://github.com/"><ion-icon class="hero-social-icon" name="logo-GitHub"></ion-icon><span>GitHub</span></a><a class="hero-social-item ui-button" target="_blank" rel="noopener" href="https://linkedin.com/"><ion-icon class="hero-social-icon" name="logo-LinkedIn"></ion-icon><span>LinkedIn</span></a></div></section><section class="post-list-section"><h2 class="section-title">최근 글</h2><div class="post-list"><a class="post-item ui-pressable-in" href="/2021/hello-world%20-%20%EB%B3%B5%EC%82%AC%EB%B3%B8%20-%20%EB%B3%B5%EC%82%AC%EB%B3%B8%20-%20%EB%B3%B5%EC%82%AC%EB%B3%B8/"><div class="post-item-info"><h4 class="post-title">마크다운 Markdown Examples</h4><div class="post-meta"><span class="post-date">2021년 06월 29일</span><!--if post.categories !== 'undefined'--><span class="post-categories"></span></div></div><div class="post-item-thumbnail"></div></a><a class="post-item ui-pressable-in" href="/2021/hello-world%20-%20%EB%B3%B5%EC%82%AC%EB%B3%B8%20-%20%EB%B3%B5%EC%82%AC%EB%B3%B8/"><div class="post-item-info"><h4 class="post-title">Hello World</h4><div class="post-meta"><span class="post-date">2021년 06월 29일</span><!--if post.categories !== 'undefined'--><span class="post-categories"></span></div></div><div class="post-item-thumbnail"></div></a><a class="post-item ui-pressable-in" href="/2021/hello-world%20-%20%EB%B3%B5%EC%82%AC%EB%B3%B8/"><div class="post-item-info"><h4 class="post-title">Hello World</h4><div class="post-meta"><span class="post-date">2021년 06월 29일</span><!--if post.categories !== 'undefined'--><span class="post-categories"></span></div></div><div class="post-item-thumbnail"></div></a><a class="post-item ui-pressable-in" href="/2021/hello-world/"><div class="post-item-info"><h4 class="post-title">Hello World</h4><div class="post-meta"><span class="post-date">2021년 06월 26일</span><!--if post.categories !== 'undefined'--><span class="post-categories"><span class="post-category">Hello</span></span></div></div><div class="post-item-thumbnail"></div></a></div></section></div>
+    <div class="container"><!--if page.path == 'index.html'--><section class="hero-section"><!--.hero-img-holder: img(src="/theme-img/perseus-hero.svg")--><div class="hero-title-field"><h4>Hogyun Jeon's Development/Designing Blog</h4><h2><a href="/about">전호균</a>의 개발/디자인 블로그입니다.</h2></div><div class="hero-social-items"><a class="hero-social-name ui-button ui-primary" href="/about">@dzonhog</a><a class="hero-social-item ui-button" target="_blank" rel="noopener" href="https://github.com/"><ion-icon class="hero-social-icon" name="logo-GitHub"></ion-icon><span>GitHub</span></a><a class="hero-social-item ui-button" target="_blank" rel="noopener" href="https://linkedin.com/"><ion-icon class="hero-social-icon" name="logo-LinkedIn"></ion-icon><span>LinkedIn</span></a></div></section><section class="post-list-section"><div class="section-header"><div class="content"><a class="to-category ui-pressable-opacity" href="/category">&#xE001; 카테고리</a><h2 class="section-title">최근 글</h2></div></div><div class="section-body"><div class="content"><ul class="post-list"><li><a class="post-item ui-pressable-in" href="/2021/hello-world%20-%20%EB%B3%B5%EC%82%AC%EB%B3%B8%20(27)/"><div class="post-item-info"><h4 class="post-title">Hello World</h4><div class="post-meta"><span class="post-date">2021년 07월 11일</span><!--if post.categories !== 'undefined'--><span class="post-categories"><span class="post-category">Hello</span></span></div></div><div class="post-item-thumbnail"></div></a></li><li><a class="post-item ui-pressable-in" href="/2021/hello-world%20-%20%EB%B3%B5%EC%82%AC%EB%B3%B8%20(26)/"><div class="post-item-info"><h4 class="post-title">Hello World</h4><div class="post-meta"><span class="post-date">2021년 07월 11일</span><!--if post.categories !== 'undefined'--><span class="post-categories"><span class="post-category">Hello</span></span></div></div><div class="post-item-thumbnail"></div></a></li><li><a class="post-item ui-pressable-in" href="/2021/hello-world%20-%20%EB%B3%B5%EC%82%AC%EB%B3%B8%20(25)/"><div class="post-item-info"><h4 class="post-title">Hello World</h4><div class="post-meta"><span class="post-date">2021년 07월 11일</span><!--if post.categories !== 'undefined'--><span class="post-categories"><span class="post-category">Hello</span></span></div></div><div class="post-item-thumbnail"></div></a></li><li><a class="post-item ui-pressable-in" href="/2021/hello-world%20-%20%EB%B3%B5%EC%82%AC%EB%B3%B8%20(24)/"><div class="post-item-info"><h4 class="post-title">Hello World</h4><div class="post-meta"><span class="post-date">2021년 07월 11일</span><!--if post.categories !== 'undefined'--><span class="post-categories"><span class="post-category">Hello</span></span></div></div><div class="post-item-thumbnail"></div></a></li><li><a class="post-item ui-pressable-in" href="/2021/hello-world%20-%20%EB%B3%B5%EC%82%AC%EB%B3%B8%20(23)/"><div class="post-item-info"><h4 class="post-title">Hello World</h4><div class="post-meta"><span class="post-date">2021년 07월 11일</span><!--if post.categories !== 'undefined'--><span class="post-categories"><span class="post-category">Hello</span></span></div></div><div class="post-item-thumbnail"></div></a></li><li><a class="post-item ui-pressable-in" href="/2021/hello-world%20-%20%EB%B3%B5%EC%82%AC%EB%B3%B8%20(22)/"><div class="post-item-info"><h4 class="post-title">Hello World</h4><div class="post-meta"><span class="post-date">2021년 07월 11일</span><!--if post.categories !== 'undefined'--><span class="post-categories"><span class="post-category">Hello</span></span></div></div><div class="post-item-thumbnail"></div></a></li><li><a class="post-item ui-pressable-in" href="/2021/hello-world%20-%20%EB%B3%B5%EC%82%AC%EB%B3%B8%20(21)/"><div class="post-item-info"><h4 class="post-title">Hello World</h4><div class="post-meta"><span class="post-date">2021년 07월 11일</span><!--if post.categories !== 'undefined'--><span class="post-categories"><span class="post-category">Hello</span></span></div></div><div class="post-item-thumbnail"></div></a></li><li><a class="post-item ui-pressable-in" href="/2021/hello-world%20-%20%EB%B3%B5%EC%82%AC%EB%B3%B8%20(20)/"><div class="post-item-info"><h4 class="post-title">Hello World</h4><div class="post-meta"><span class="post-date">2021년 07월 11일</span><!--if post.categories !== 'undefined'--><span class="post-categories"><span class="post-category">Hello</span></span></div></div><div class="post-item-thumbnail"></div></a></li><li><a class="post-item ui-pressable-in" href="/2021/hello-world%20-%20%EB%B3%B5%EC%82%AC%EB%B3%B8%20(19)/"><div class="post-item-info"><h4 class="post-title">Hello World</h4><div class="post-meta"><span class="post-date">2021년 07월 11일</span><!--if post.categories !== 'undefined'--><span class="post-categories"><span class="post-category">Hello</span></span></div></div><div class="post-item-thumbnail"></div></a></li><li><a class="post-item ui-pressable-in" href="/2021/hello-world%20-%20%EB%B3%B5%EC%82%AC%EB%B3%B8%20(18)/"><div class="post-item-info"><h4 class="post-title">Hello World</h4><div class="post-meta"><span class="post-date">2021년 07월 11일</span><!--if post.categories !== 'undefined'--><span class="post-categories"><span class="post-category">Hello</span></span></div></div><div class="post-item-thumbnail"></div></a></li></ul></div></div></section><!--elsesection.category-list-section.t-p
+  .details-grid
+    .details-category
+      .details-header
+        h2.details-title 카테고리
+      .details-body
+        +categoryList(site.categories.data)
+    .details-post
+      .details-header
+        h2.details-title 모든 글
+      .details-body
+        +postList(page.posts.data)--></div>
     <!--<footer><div class="inner">
     <div class="links">
         <% for (const i in theme.footer) { %>

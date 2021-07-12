@@ -12,8 +12,8 @@
   --color-primary-dark: #1939d7;
   --color-on-primary: white;
 
-  --color-base: #ebebeb;
-  --color-base-dimmed: #d7d7d7;
+  --color-base: #ededed;
+  --color-base-dimmed: #dedede;
   --color-on-base: var(--color-on-background);
 
   --color-button-outline: #7070704f;
@@ -153,8 +153,8 @@ html {
 }
 :root[dark] .ui-pressable-in:hover,
 :root[dark] .ui-pressable-in:focus {
-  filter: brightness(.87);
+  filter: brightness(.97);
 }
 :root[dark] .ui-pressable-in:active {
-  filter: brightness(.76);
+  filter: brightness(.88);
 }

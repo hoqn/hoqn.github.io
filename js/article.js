@@ -45,7 +45,7 @@ function stickyArticleSidebar(e) {
   }
 
   let y = document.scrollingElement.scrollTop;
-  console.log(`Y: ${y}, top: ${top}, maxY: ${maxY}, sidebarHeight: ${sidebar.offsetHeight}, parentHeight: ${parentOffset.height}, fixedHeight: ${fixedSidecardHeight}`);
+  //console.log(`Y: ${y}, top: ${top}, maxY: ${maxY}, sidebarHeight: ${sidebar.offsetHeight}, parentHeight: ${parentOffset.height}, fixedHeight: ${fixedSidecardHeight}`);
   if(y > top) {
     if(y < maxY) {
       sidebar.classList.add('fixed');

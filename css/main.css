@@ -11,6 +11,10 @@ body {
   background-color: var(--color-background);
 }
 
+h1, h2, h3, h4, h5, h6, ul {
+  margin: 0;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -29,4 +33,23 @@ a {
 
 .container>:first-child.no-top-inset {
   margin-top: 0;
+}
+
+section .section-header.t-p {
+  padding-top: 32px;
+}
+
+section .section-header>.content,
+section .section-body>.content {
+  max-width: 936px;
+  margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: content-box;
+}
+
+section .section-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }

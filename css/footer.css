@@ -34,7 +34,7 @@ footer .links .group .item {
 }
 
 footer .links .group .item:not(:last-child):after {
-  content: "·";
+  content: "\E001";
   opacity: .375;
   margin: 0 8px;
 }

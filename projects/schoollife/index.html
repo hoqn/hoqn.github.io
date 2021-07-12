@@ -50,6 +50,12 @@
   
 <link rel="stylesheet" href="/css/nav-mobile.css">
 
+  
+<link rel="stylesheet" href="/css/categories.css">
+
+  
+<link rel="stylesheet" href="/css/pagination.css">
+
 
   
 <link rel="stylesheet" href="/css/markdown.css">
@@ -64,8 +70,22 @@
   <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
 
 <meta name="generator" content="Hexo 5.4.0"></head>
-  <body>
-    <nav id="theme-nav"><div class="inner"><a class="title ui-pressable-opacity" href="/"><!--img(img=theme.nav.logo)-->JeonHogyun ui Blog</a><a class="nav-hand ui-pressable-opacity"><div class="nav-hand-indicator"></div></a><div class="nav-items"><div class="nav-item"><a class="nav-link ui-pressable-opacity" href="/about">소개<span class="nav-indicator"></span></a></div><div class="nav-item active"><a class="nav-link ui-pressable-opacity" href="/projects">프로젝트<span class="nav-indicator"></span></a></div><div class="nav-item"><a class="nav-link ui-pressable-opacity" href="/categories">카테고리<span class="nav-indicator"></span></a></div><div class="nav-item"><a class="nav-link ui-pressable-opacity" href="/archives">글<span class="nav-indicator"></span></a></div><div class="nav-item nav-item-icon"><a class="nav-link ui-pressable-opacity" target="_blank" rel="noopener" href="https://github.com/hoqn"><ion-icon name="logo-github"></ion-icon></a></div><div class="nav-item"><a class="nav-mode-switch ui-pressable-opacity"><ion-icon class="nav-dark" name="moon"></ion-icon><ion-icon class="nav-light" name="sunny"></ion-icon></a></div><!--if theme.nav.show_search_item//- partial('_partial/localsearch')
+  <body class="p-lo">
+    <style>
+      body.p-lo {
+        transition: none !important;
+        -o-transition: none !important;
+        -webkit-transition: none !important;
+        -ms-transition: none !important;
+        -moz-transition: none !important;
+      }
+    </style>
+    <script>
+      window.addEventListener('load', (e) => {
+        document.body.classList.remove('p-lo');
+      });
+    </script>
+    <nav id="theme-nav"><div class="inner"><a class="title ui-pressable-opacity" href="/"><!--img(img=theme.nav.logo)-->BLOGGY</a><a class="nav-hand ui-pressable-opacity"><div class="nav-hand-indicator"></div></a><div class="nav-items"><div class="nav-item"><a class="nav-link ui-pressable-opacity" href="/about">소개<span class="nav-indicator"></span></a></div><div class="nav-item active"><a class="nav-link ui-pressable-opacity" href="/projects">프로젝트<span class="nav-indicator"></span></a></div><div class="nav-item"><a class="nav-link ui-pressable-opacity" href="/archives">글 목록<span class="nav-indicator"></span></a></div><div class="nav-item nav-item-icon"><a class="nav-link ui-pressable-opacity" target="_blank" rel="noopener" href="https://github.com/hoqn"><ion-icon name="logo-github"></ion-icon></a></div><div class="nav-item"><a class="nav-mode-switch ui-pressable-opacity"><ion-icon class="nav-dark" name="moon"></ion-icon><ion-icon class="nav-light" name="sunny"></ion-icon></a></div><!--if theme.nav.show_search_item//- partial('_partial/localsearch')
 .search-header
   span.search-icon
     i.fa.fa-search
@@ -85,22 +105,15 @@
 //.nav-item.nav-item-search
   a.nav-link
     ion-icon(name=icons.search)--></div></div></nav>
-    <div class="article-container"><div class="article-header"><div class="content"><div class="article-head-date">2021. 07. 03.에 작성 / 2021. 07. 08.에 수정</div><h2 class="article-title">학교+</h2></div></div><div class="divider horizontal"></div><div class="article-dis"><div class="article-body"><div class="content markdown-body"></div></div></div></div><!--.post-containerarticle.post-article
-  .post-head
-    .post-inner
-      .post-meta
-        if page.categories
-          div.post-categories
-            each category in page.categories.data
-              span.post-category= category.name
-        unless page.no_date
-          span.post-date#post-date= date(page.date, 'YYYY년 M월 D일')
-      h2.post-title= page.title
-      if page.subtitle
-        h4.post-subtitle= page.subtitle
-  .post-body
-    .post-inner
-      .post-content.markdown-body!= page.content-->
+    <div class="article-container"><div class="article-header"><div class="content"><div class="article-head-date">2021. 07. 08.에 작성 / 2021. 07. 13.에 수정</div><h2 class="article-title">학교+</h2></div></div><div class="divider horizontal"></div><div class="article-dis"><div class="article-sidebar" id="article-sidebar"><div class="content"><div class="ui-card"><div class="article-widget-head"><div class="h-title"><div class="h-title-title">학교+</div></div></div><!--.article-widget-toceach item, index in toc
+  .toc-item
+    .toc-cur= index
+--><div class="article-widget-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%EA%B0%9C%EB%B0%9C-%EB%B0%B0%EA%B2%BD"><span class="toc-text">1. 개발 배경</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%EA%B0%9C%EC%9A%94"><span class="toc-text">2. 개요</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-%EB%B8%8C%EB%9E%9C%EB%94%A9-%EB%B0%8F-%EC%9D%B4%EB%A6%84"><span class="toc-text">3.1. 브랜딩 및 이름</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-%ED%94%8C%EB%9E%AB%ED%8F%BC-%EB%B0%8F-%ED%99%98%EA%B2%BD"><span class="toc-text">3.2.플랫폼 및 환경</span></a></li></ol></li></ol></div></div></div></div><div class="article-body"><div class="content markdown-body"><h1 id="1-개발-배경"><a href="#1-개발-배경" class="headerlink" title="1. 개발 배경"></a>1. 개발 배경</h1><p>초중고 학교를 다니던 시절, 급식 앱을 많이 사용하곤 했다. 더욱이 반에서 서기 역할을 자주 맡으며 아침마다 식단을 칠판 한켠에 적어 놓기도 하였다.</p>
+<p>한편, 급식 정보만 얻을 수 있는 점은 다소 아쉬웠다. 당시만 해도 시간표는 학교 공지사항에 올라오는 것이 다였다. (아마 NEIS에는 등록이 되어 있었겠지만, 당시로선 해당 정보가 공개되어있지 않았다.)</p>
+<p>고등학교를 졸업하고 나서 어느 날, NEIS에서 공개 API를 운영한다는 것을 알게 되었다. 제공하는 내용들을 살펴보다 문득, 이 정보들을 한 번에 다 볼 수 있다면 편하겠다라는 생각을 하게 되어 ‘학교+’를 제작하게 되었다.</p>
+<h1 id="2-개요"><a href="#2-개요" class="headerlink" title="2. 개요"></a>2. 개요</h1><h2 id="3-1-브랜딩-및-이름"><a href="#3-1-브랜딩-및-이름" class="headerlink" title="3.1. 브랜딩 및 이름"></a>3.1. 브랜딩 및 이름</h2><p>공식적인 애플리케이션 이름은 ‘학교+‘ —‘학교플러스’라고 읽는다— 이며, 영어 표기는 ‘School+‘이다.</p>
+<h2 id="3-2-플랫폼-및-환경"><a href="#3-2-플랫폼-및-환경" class="headerlink" title="3.2.플랫폼 및 환경"></a>3.2.플랫폼 및 환경</h2><p>안드로이드를 대상으로 개발한다. 안드로이드 SDK를 그대로 사용하여 개발하며, JAVA가 아닌 Kotlin으로 작성한다.</p>
+</div></div></div></div>
     <!--<footer><div class="inner">
     <div class="links">
         <% for (const i in theme.footer) { %>

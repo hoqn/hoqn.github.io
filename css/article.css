@@ -29,8 +29,11 @@
   font-weight: normal;
   font-size: 1rem;
 }
-.article-header .content .article-categories span:not(:last-child)::after {
-  content: "·";
+/*.article-header .content .article-categories a:not(:last-child)::after {
+  content: "\E001";
+  margin: 0 4px;
+}*/
+.article-header .content .article-categories .separator {
   margin: 0 4px;
 }
 .article-header .content .article-title {
@@ -138,8 +141,9 @@
   margin-bottom: 4px;
 }
 .article-widget-head .h-title>.h-title-category>span:not(:last-child)::after {
-  content: "·";
-  margin: 0;
+  content: "\E001";
+  opacity: .375;
+  margin: 0 4px;
 }
 .article-widget-head .h-title>.h-title-title {
   font-weight: bold;
