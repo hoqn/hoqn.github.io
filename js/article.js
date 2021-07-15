@@ -1,7 +1,7 @@
 (() => {
 const sidebarParent = document.querySelector('.article-dis');
 const sidebar = document.getElementById('article-sidebar');
-const sidecard = document.querySelector('#article-sidebar .ui-card');
+const sidecard = document.querySelector('#article-sidebar .sidebar-container');
 const barY = sidebar.offsetTop - 56 - 16 - 64;
 
 function offset(element) {
