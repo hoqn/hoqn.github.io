@@ -863,7 +863,8 @@ nav .nav-mode-switch {
   border-radius: 2px;
   border: 1px solid var(--color-surface-dimmed);
 }*/
-.post-menu-tab > .tab-body {
+.post-menu-tab > .tab-body,
+.post-menu-tab > .tab-body-block {
   margin-top: 16px; }
 
 .post-menu-tab input {
@@ -949,10 +950,10 @@ nav .nav-mode-switch {
 .tab-body#post-menu-tab-body-category {
   display: none; }
 
-.post-menu-tab > input#post-menu-tab-item-archive:checked ~ .tab-body#post-menu-tab-body-archive {
+.post-menu-tab > input#post-menu-tab-item-archive:checked ~ .tab-body-block > .tab-body#post-menu-tab-body-archive {
   display: block; }
 
-.post-menu-tab > input#post-menu-tab-item-category:checked ~ .tab-body#post-menu-tab-body-category {
+.post-menu-tab > input#post-menu-tab-item-category:checked ~ .tab-body-block > .tab-body#post-menu-tab-body-category {
   display: block; }
 
 /* ArcDates and Categories */
