@@ -1,0 +1,491 @@
+.markdown-body {
+  --m-color-bg-canvas: var(--color-background);
+  --m-color-bg-secondary: var(--color-background);
+  --m-color-bg-tertiary: var(--color-surface);
+  --m-color-bg-code: #ebebebae;
+  --m-color-border-primary: #e8e8e8;
+  --m-color-border-secondary: #dddddd;
+  --m-color-border-tertiary: #cdceda;
+  --m-color-blockquote-left: var(--m-color-border-secondary);
+  --m-color-text-canvas: #070707;
+  --m-color-text-tertiary: #777777;
+  --m-color-text-link: #3073b6;
+  --m-color-text-link-absent: #c92929;
+  --m-color-bg-table-head: #ececec;
+  --m-color-bg-table-primary: #fafafa;
+  --m-color-bg-table-secondary: #f1f1f3; }
+
+:root[dark] .markdown-body {
+  --m-color-bg-code: #2d2d33;
+  --m-color-border-primary: #444C56;
+  --m-color-border-secondary: #535963;
+  --m-color-border-tertiary: #3e3e42;
+  --m-color-text-canvas: #d5d7db;
+  --m-color-text-tertiary: #9297a3;
+  --m-color-text-link: #639ed8;
+  --m-color-text-link-absent: #d88c8c;
+  --m-color-bg-table-head: #303030;
+  --m-color-bg-table-primary: #27292c;
+  --m-color-bg-table-secondary: #2a2c30; }
+
+.markdown-body {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding: 32px;
+  font-family: 'Spoqa Han Sans Neo', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  word-wrap: break-word;
+  background-color: var(--m-color-bg-canvas);
+  color: var(--m-color-text-canvas);
+  /*
+  table {
+    padding: 0;
+  }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+  }
+  
+  table tr:nth-child(2n) {
+    background-color: #f8f8f8;
+  }
+  
+  table tr th {
+    font-weight: bold;
+    border: 1px solid #cccccc;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+  }
+  
+  table tr td {
+    border: 1px solid #cccccc;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+  }
+  
+  table tr th :first-child, table tr td :first-child {
+    margin-top: 0;
+  }
+  
+  table tr th :last-child, table tr td :last-child {
+    margin-bottom: 0;
+  }*/
+  /* ==== 
+
+  .highlight {
+    padding: 0;
+    margin: 0;
+    display: block;
+    table {
+      display: block;
+      margin: 0;
+      tbody {
+        display: block;
+      }
+      tr {
+        display: block;
+        border: 0 none;
+        background-color: transparent;
+      }
+      td {
+        display: block;
+        margin: 0;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+      }
+    }
+  }*/
+  /*
+
+Atom One Light by Daniel Gamage
+Original One Light Syntax theme from https://github.com/atom/one-light-syntax
+
+base:    #fafafa
+mono-1:  #383a42
+mono-2:  #686b77
+mono-3:  #a0a1a7
+hue-1:   #0184bb
+hue-2:   #4078f2
+hue-3:   #a626a4
+hue-4:   #50a14f
+hue-5:   #e45649
+hue-5-2: #c91243
+hue-6:   #986801
+hue-6-2: #c18401
+
+*/
+  /* === */
+  /* === */ }
+  .markdown-body > *:first-child {
+    margin-top: 0 !important; }
+  .markdown-body > *:last-child {
+    margin-bottom: 0 !important; }
+  .markdown-body a {
+    color: var(--m-color-text-link);
+    text-decoration: none; }
+  .markdown-body a.absent {
+    color: var(--m-color-text-link-absent); }
+  .markdown-body a.anchor {
+    display: block;
+    padding-left: 30px;
+    margin-left: -30px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0; }
+  .markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4, .markdown-body h5, .markdown-body h6 {
+    margin: 24px 0 16px;
+    padding: 0;
+    line-height: 1.25;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    cursor: text;
+    position: relative; }
+  .markdown-body h2:first-child, .markdown-body h1:first-child, .markdown-body h1:first-child + h2, .markdown-body h3:first-child, .markdown-body h4:first-child, .markdown-body h5:first-child, .markdown-body h6:first-child {
+    margin-top: 0;
+    padding-top: 0; }
+  .markdown-body h1:hover a.anchor, .markdown-body h2:hover a.anchor, .markdown-body h3:hover a.anchor, .markdown-body h4:hover a.anchor, .markdown-body h5:hover a.anchor, .markdown-body h6:hover a.anchor {
+    text-decoration: none; }
+  .markdown-body h1 tt, .markdown-body h1 code {
+    font-size: inherit; }
+  .markdown-body h2 tt, .markdown-body h2 code {
+    font-size: inherit; }
+  .markdown-body h3 tt, .markdown-body h3 code {
+    font-size: inherit; }
+  .markdown-body h4 tt, .markdown-body h4 code {
+    font-size: inherit; }
+  .markdown-body h5 tt, .markdown-body h5 code {
+    font-size: inherit; }
+  .markdown-body h6 tt, .markdown-body h6 code {
+    font-size: inherit; }
+  .markdown-body h1, .markdown-body h2 {
+    border-bottom: 1px solid var(--m-color-border-secondary);
+    padding-bottom: .3em; }
+  .markdown-body h1 {
+    font-size: 2em;
+    color: inherit; }
+  .markdown-body h2 {
+    font-size: 1.5em;
+    color: inherit; }
+  .markdown-body h3 {
+    font-size: 1.25em; }
+  .markdown-body h4 {
+    font-size: 1.125em; }
+  .markdown-body h5 {
+    font-size: 1em; }
+  .markdown-body h6 {
+    font-size: .875em;
+    color: inherit; }
+  .markdown-body p, .markdown-body blockquote, .markdown-body ul, .markdown-body ol, .markdown-body dl, .markdown-body li, .markdown-body table, .markdown-body pre {
+    margin: 16px 0; }
+  .markdown-body hr {
+    border: 0 none;
+    background-color: var(--m-color-border-primary);
+    height: 4px;
+    padding: 0;
+    margin: 24px 0; }
+  .markdown-body body > h2:first-child {
+    margin-top: 0;
+    padding-top: 0; }
+  .markdown-body body > h1:first-child {
+    margin-top: 0;
+    padding-top: 0; }
+  .markdown-body body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+  .markdown-body body > h3:first-child, .markdown-body body > h4:first-child, .markdown-body body > h5:first-child, .markdown-body body > h6:first-child {
+    margin-top: 0;
+    padding-top: 0; }
+  .markdown-body a:first-child h1, .markdown-body a:first-child h2, .markdown-body a:first-child h3, .markdown-body a:first-child h4, .markdown-body a:first-child h5, .markdown-body a:first-child h6 {
+    margin-top: 0;
+    padding-top: 0; }
+  .markdown-body h1 p, .markdown-body h2 p, .markdown-body h3 p, .markdown-body h4 p, .markdown-body h5 p, .markdown-body h6 p {
+    margin-top: 0; }
+  .markdown-body li p.first {
+    display: inline-block; }
+  .markdown-body ul, .markdown-body ol {
+    /*padding-left: 32px;*/
+    padding-left: 2em; }
+  .markdown-body ul :first-child, .markdown-body ol :first-child {
+    margin-top: 0; }
+  .markdown-body ul :last-child, .markdown-body ol :last-child {
+    margin-bottom: 0; }
+  .markdown-body dl {
+    padding: 0; }
+  .markdown-body dl dt {
+    font-size: .875em;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 16px 0 8px; }
+  .markdown-body dl dt:first-child {
+    padding: 0; }
+  .markdown-body dl dt > :first-child {
+    margin-top: 0; }
+  .markdown-body dl dt > :last-child {
+    margin-bottom: 0; }
+  .markdown-body dl dd {
+    margin: 0 0 16px;
+    padding: 0 16px; }
+  .markdown-body dl dd > :first-child {
+    margin-top: 0; }
+  .markdown-body dl dd > :last-child {
+    margin-bottom: 0; }
+  .markdown-body blockquote {
+    border-left: 4px solid var(--m-color-blockquote-left);
+    padding: 0 15px;
+    color: var(--m-color-text-tertiary); }
+  .markdown-body blockquote > :first-child {
+    margin-top: 0; }
+  .markdown-body blockquote > :last-child {
+    margin-bottom: 0; }
+  .markdown-body img {
+    max-width: 100%; }
+  .markdown-body span.frame {
+    display: block;
+    overflow: hidden; }
+  .markdown-body span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 16px 0 0;
+    padding: 8px;
+    width: auto; }
+  .markdown-body span.frame span img {
+    display: block;
+    float: left; }
+  .markdown-body span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+  .markdown-body span.align-center {
+    display: block;
+    overflow: hidden;
+    clear: both; }
+  .markdown-body span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  .markdown-body span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+  .markdown-body span.align-right {
+    display: block;
+    overflow: hidden;
+    clear: both; }
+  .markdown-body span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  .markdown-body span.align-right span img {
+    margin: 0;
+    text-align: right; }
+  .markdown-body span.float-left {
+    display: block;
+    margin-right: 13px;
+    overflow: hidden;
+    float: left; }
+  .markdown-body span.float-left span {
+    margin: 13px 0 0; }
+  .markdown-body span.float-right {
+    display: block;
+    margin-left: 13px;
+    overflow: hidden;
+    float: right; }
+  .markdown-body span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+  .markdown-body code, .markdown-body tt {
+    font-family: "Consolas", monospace;
+    margin: 0 2px;
+    padding: .2em .4em;
+    /*font-size: 85%;*/
+    font-size: .875em;
+    white-space: nowrap;
+    border: 1px solid var(--m-color-border-tertiary);
+    background-color: var(--m-color-bg-code);
+    border-radius: 4px; }
+  .markdown-body pre code {
+    margin: 0;
+    padding: 0;
+    white-space: pre;
+    border: none;
+    background: transparent; }
+  .markdown-body .highlight pre,
+  .markdown-body pre {
+    background-color: var(--m-color-bg-tertiary);
+    border: 1px solid var(--m-color-border-tertiary);
+    font-size: .875em;
+    line-height: 1.4;
+    overflow: auto;
+    padding: 16px;
+    border-radius: 4px; }
+  .markdown-body pre code,
+  .markdown-body pre tt {
+    background-color: transparent;
+    border: none; }
+  .markdown-body table {
+    display: block;
+    width: 100%;
+    overflow: auto;
+    border-collapse: collapse; }
+  .markdown-body table th {
+    font-weight: bold;
+    background-color: var(--m-color-bg-table-head); }
+  .markdown-body table td,
+  .markdown-body table th {
+    padding: 8px 16px;
+    border: 1px solid var(--m-color-border-tertiary); }
+  .markdown-body table tr {
+    background-color: var(--m-color-bg-table-primary);
+    border-top: 1px solid var(--m-color-border-tertiary); }
+  .markdown-body table tr:nth-child(2n) {
+    background-color: var(--m-color-bg-table-secondary); }
+
+:root .markdown-body .hljs {
+  color: #383a42;
+  /*background: #fafafa;*/ }
+
+:root .markdown-body .hljs-comment,
+:root .markdown-body .hljs-quote {
+  color: #a0a1a7;
+  font-style: italic; }
+
+:root .markdown-body .hljs-doctag,
+:root .markdown-body .hljs-keyword,
+:root .markdown-body .hljs-formula {
+  color: #a626a4; }
+
+:root .markdown-body .hljs-section,
+:root .markdown-body .hljs-name,
+:root .markdown-body .hljs-selector-tag,
+:root .markdown-body .hljs-deletion,
+:root .markdown-body .hljs-subst {
+  color: #e45649; }
+
+:root .markdown-body .hljs-literal {
+  color: #0184bb; }
+
+:root .markdown-body .hljs-string,
+:root .markdown-body .hljs-regexp,
+:root .markdown-body .hljs-addition,
+:root .markdown-body .hljs-attribute,
+:root .markdown-body .hljs-meta .hljs-string {
+  color: #50a14f; }
+
+:root .markdown-body .hljs-attr,
+:root .markdown-body .hljs-variable,
+:root .markdown-body .hljs-template-variable,
+:root .markdown-body .hljs-type,
+:root .markdown-body .hljs-selector-class,
+:root .markdown-body .hljs-selector-attr,
+:root .markdown-body .hljs-selector-pseudo,
+:root .markdown-body .hljs-number {
+  color: #986801; }
+
+:root .markdown-body .hljs-symbol,
+:root .markdown-body .hljs-bullet,
+:root .markdown-body .hljs-link,
+:root .markdown-body .hljs-meta,
+:root .markdown-body .hljs-selector-id,
+:root .markdown-body .hljs-title {
+  color: #4078f2; }
+
+:root .markdown-body .hljs-built_in,
+:root .markdown-body .hljs-title.class_,
+:root .markdown-body .hljs-class .hljs-title {
+  color: #c18401; }
+
+:root .markdown-body .hljs-emphasis {
+  font-style: italic; }
+
+:root .markdown-body .hljs-strong {
+  font-weight: bold; }
+
+:root .markdown-body .hljs-link {
+  text-decoration: underline; }
+
+:root[dark] .markdown-body {
+  /*
+
+Atom One Dark by Daniel Gamage
+Original One Dark Syntax theme from https://github.com/atom/one-dark-syntax
+
+base:    #282c34
+mono-1:  #abb2bf
+mono-2:  #818896
+mono-3:  #5c6370
+hue-1:   #56b6c2
+hue-2:   #61aeee
+hue-3:   #c678dd
+hue-4:   #98c379
+hue-5:   #e06c75
+hue-5-2: #be5046
+hue-6:   #d19a66
+hue-6-2: #e6c07b
+
+*/ }
+  :root[dark] .markdown-body .hljs {
+    color: #abb2bf;
+    background: #282c34; }
+  :root[dark] .markdown-body .hljs-comment,
+  :root[dark] .markdown-body .hljs-quote {
+    color: #5c6370;
+    font-style: italic; }
+  :root[dark] .markdown-body .hljs-doctag,
+  :root[dark] .markdown-body .hljs-keyword,
+  :root[dark] .markdown-body .hljs-formula {
+    color: #c678dd; }
+  :root[dark] .markdown-body .hljs-section,
+  :root[dark] .markdown-body .hljs-name,
+  :root[dark] .markdown-body .hljs-selector-tag,
+  :root[dark] .markdown-body .hljs-deletion,
+  :root[dark] .markdown-body .hljs-subst {
+    color: #e06c75; }
+  :root[dark] .markdown-body .hljs-literal {
+    color: #56b6c2; }
+  :root[dark] .markdown-body .hljs-string,
+  :root[dark] .markdown-body .hljs-regexp,
+  :root[dark] .markdown-body .hljs-addition,
+  :root[dark] .markdown-body .hljs-attribute,
+  :root[dark] .markdown-body .hljs-meta .hljs-string {
+    color: #98c379; }
+  :root[dark] .markdown-body .hljs-attr,
+  :root[dark] .markdown-body .hljs-variable,
+  :root[dark] .markdown-body .hljs-template-variable,
+  :root[dark] .markdown-body .hljs-type,
+  :root[dark] .markdown-body .hljs-selector-class,
+  :root[dark] .markdown-body .hljs-selector-attr,
+  :root[dark] .markdown-body .hljs-selector-pseudo,
+  :root[dark] .markdown-body .hljs-number {
+    color: #d19a66; }
+  :root[dark] .markdown-body .hljs-symbol,
+  :root[dark] .markdown-body .hljs-bullet,
+  :root[dark] .markdown-body .hljs-link,
+  :root[dark] .markdown-body .hljs-meta,
+  :root[dark] .markdown-body .hljs-selector-id,
+  :root[dark] .markdown-body .hljs-title {
+    color: #61aeee; }
+  :root[dark] .markdown-body .hljs-built_in,
+  :root[dark] .markdown-body .hljs-title.class_,
+  :root[dark] .markdown-body .hljs-class .hljs-title {
+    color: #e6c07b; }
+  :root[dark] .markdown-body .hljs-emphasis {
+    font-style: italic; }
+  :root[dark] .markdown-body .hljs-strong {
+    font-weight: bold; }
+  :root[dark] .markdown-body .hljs-link {
+    text-decoration: underline; }
