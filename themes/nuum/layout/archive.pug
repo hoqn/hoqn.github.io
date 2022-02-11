@@ -1,0 +1,37 @@
+extends _partial/post-list
+
+include mixins/post
+
+block left-title
+  | 블로그
+
+//-
+  block left-body
+  +postMenuTab(page.archive && !page.month && !page.year, false)
+  +archiveDateList()
+block left-body
+  +postMenuTab(0)
+
+block right-title
+  span.pre-title= __('archive.archives')
+  if page.year && page.month
+    = `${page.year}년 ${page.month}월`
+  else
+    = __('archive.all')
+
+//-
+  include mixins/post
+
+  .container
+  section.category-list-section.t-p
+    .details-grid
+      .details-category
+        .details-header
+          h2.details-title 카테고리
+        .details-body
+          //+categoryList(site.categories.data)
+      .details-post
+        .details-header
+          h2.details-title 모든 글
+        .details-body
+          +postList(page.posts.data)

@@ -1,0 +1,9 @@
+nav.pagination.is-centered#pagination(role="navigation" aria-label="pagination")
+  a(href=page.next_link).pagination-previous: ion-icon(name="chevron-back")
+  a(href=page.prev_link).pagination-next: ion-icon(name="chevron-forward")
+  ul.pagination-list
+    - var i = current - 2
+    while i <= current + 2
+      if i > 0
+        li: a.pagination-link(href="#" class={'is-current': current == i})= i
+      - i += 1

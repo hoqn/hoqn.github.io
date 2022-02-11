@@ -1,0 +1,13 @@
+section.main-head#main-head
+
+  .profile
+    a.profile-logo.ui-pressable--opacity(href="/"): img(src=theme.nav.logo)
+    .profile-subtitle 전호균
+  
+  if(theme.main_head.menu)
+    .menu-container 
+      ul 
+        each value, key in theme.main_head.menu
+          li: a(href=value).ui-pressable--opacity= key
+
+!= css('css/main_head')

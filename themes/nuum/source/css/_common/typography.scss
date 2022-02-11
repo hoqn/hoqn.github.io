@@ -1,0 +1,175 @@
+$text-size--xs: 0.75rem;
+$text-size--sm: 0.875rem;
+$text-size--md: 1rem;
+$text-size--lg: 1.5rem;
+$text-size--xl: 2rem;
+$text-size--2xl: 2.5rem;
+$text-size--3xl: 3rem;
+$text-size--4xl: 4rem;
+$text-size--5xl: 4.5rem;
+$text-size--6xl: 5rem;
+
+/*$text-size-base: 1rem;
+$text-scale-ratio: 1.2;
+
+.text {
+  &--xs {
+    font-size: $text-size-base / $text-scale-ratio;
+  }
+  &--sm {
+    font-size: $text-size-base;
+  }
+  &--md {
+    font-size: $text-size-base * $text-scale-ratio;
+  }
+  &--lg {
+    font-size: $text-size-base * $text-scale-ratio * $text-scale-ratio;
+  }
+  &--xl {
+    font-size: $text-size-base * $text-scale-ratio * $text-scale-ratio * $text-scale-ratio;
+  }
+  &--xxl {
+    font-size: $text-size-base * $text-scale-ratio * $text-scale-ratio * $text-scale-ratio * $text-scale-ratio;
+  }
+  &--xxxl {
+    font-size: $text-size-base * $text-scale-ratio * $text-scale-ratio * $text-scale-ratio * $text-scale-ratio * $text-scale-ratio;
+  }
+}
+
+h1 {
+  @extend .text--xxxl;
+}
+h2 {
+  @extend .text--xxl;
+}
+h3 {
+  @extend .text--xl;
+}
+h4 {
+  @extend .text--lg;
+}
+h5 {
+  @extend .text--sm;
+}
+h6 {
+  @extend .text--xs;
+}*/
+@mixin text {
+  &--xs {
+    font-weight: normal;
+    font-size: $text-size--xs;
+  }
+  &--sm {
+    font-weight: normal;
+    font-size: $text-size--sm;
+  }
+  &--md {
+    font-weight: normal;
+    font-size: $text-size--md;
+  }
+  &--lg {
+    font-weight: normal;
+    font-size: $text-size--lg;
+  }
+  &--xl {
+    font-weight: normal;
+    font-size: $text-size--xl;
+  }
+  &--2xl {
+    font-weight: normal;
+    font-size: $text-size--2xl;
+  }
+  &--3xl {
+    font-weight: normal;
+    font-size: $text-size--3xl;
+  }
+  &--4xl {
+    font-weight: normal;
+    font-size: $text-size--4xl;
+  }
+  &--5xl {
+    font-weight: normal;
+    font-size: $text-size--5xl;
+  }
+  &--6xl {
+    font-weight: normal;
+    font-size: $text-size--6xl;
+  }
+
+  &--h1 {
+    font-weight: bold;
+    font-size: 2.75rem;
+  }
+  &--h2 {
+    font-weight: bold;
+    font-size: 2.5rem;
+  }
+  &--h3 {
+    font-weight: bold;
+    font-size: 2.25rem;
+  }
+  &--h4 {
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  &--h5 {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  &--h6 {
+    font-weight: bold;
+    font-size: 1.25rem;
+  }
+
+  &--subtitle-1 {
+    font-weight: normal;
+    font-size: 1rem;
+  }
+  &--subtitle-2 {
+    font-weight: bold;
+    font-size: .875rem;
+  }
+
+  &--body {
+    font-weight: normal;
+    font-size: 1rem;
+  }
+  &--body-sm {
+    font-weight: normal;
+    font-size: .875rem;
+  }
+
+  &--overline {
+    font-weight: bold;
+    font-size: .750rem;
+  }
+
+  &--caption {
+    font-weight: normal;
+    font-size: .750rem;
+  }
+}
+
+.text {
+  @include text();
+}
+
+h1 {
+  @extend .text--h1;
+}
+h2 {
+  @extend .text--h2;
+}
+h3 {
+  @extend .text--h3;
+}
+h4 {
+  @extend .text--h4;
+}
+h5 {
+  @extend .text--h5;
+}
+h6 {
+  @extend .text--h6;
+}
+

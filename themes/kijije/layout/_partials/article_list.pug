@@ -1,0 +1,35 @@
+
+
+#articleList
+  nav.breadcrumb(aria-label="breadcrumbs")
+    ul
+      li: a= page.category
+
+  .box.p-0(style="overflow: hidden")
+    a.is-block.hq-pressable.hq--dim.item
+      .block.p-4
+        .title.is-6 Test 제목
+        .subtitle.is-6 2022-02-02
+    hr
+    a.is-block.hq-pressable.hq--dim.item
+      .block.p-4
+        .title.is-6 Test 제목
+        .subtitle.is-6 2022-02-02
+    hr
+    a.is-block.hq-pressable.hq--dim.item
+      .block.p-4
+        .title.is-6 Test 제목
+        .subtitle.is-6 2022-02-02
+    hr
+    a.is-block.hq-pressable.hq--dim.item
+      .block.p-4
+        .title.is-6 Test 제목
+        .subtitle.is-6 2022-02-02
+    hr
+
+  include ./pagination
+
+style.
+  #articleList hr {
+    margin: 0;
+  }

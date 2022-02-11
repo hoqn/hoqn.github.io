@@ -1,0 +1,229 @@
+//-
+  mixin postMenuTab(isArchiveIndex = false, isCategoryIndex = false)
+  ul.categories
+    li.category-entry(class={"active": isArchiveIndex})
+      a(href=url_for(config.archive_dir)).ui-pressable-in
+        ion-icon.icon(name=isArchiveIndex?"archive":"archive-outline")
+        = __('archive.archives')
+    li.category-entry.ga-g(class={"active": isCategoryIndex})
+      a(href=url_for(config.category_dir)).ui-pressable-in
+        ion-icon.icon(name=isCategoryIndex?"file-tray-stacked":"file-tray-stacked-outline")
+        = __('category.categories')
+  ul.categories
+    li.category-entry(class={"active": isArchiveIndex})
+      a(href=url_for(config.archive_dir)).ui-pressable-in
+        | 모든 글
+
+mixin postMenuTab(defaultChecked = 0)  
+  .post-menu-tab
+
+    input(id="post-menu-tab-item-archive", type="radio", name="post-menu-tabs" checked=(0===0))
+    label.tab-item(for="post-menu-tab-item-archive").ui-pressable--dim
+      ion-icon.icon.active(name="archive")
+      ion-icon.icon.inactive(name="archive-outline")
+      = __('archive.archives')
+    input(id="post-menu-tab-item-category", type="radio", name="post-menu-tabs" checked=(defaultChecked===1))
+    label.tab-item(for="post-menu-tab-item-category").ui-pressable--dim
+      ion-icon.icon.active(name="file-tray-stacked")
+      ion-icon.icon.inactive(name="file-tray-stacked-outline")
+      = __('category.categories')
+      
+    .tab-body
+      ul.categories.ui-surface
+        li.category-entry(class={"active": page.path == `${config.archive_dir}/index.html`})
+          a(href=url_for(config.archive_dir)).ui-pressable--dim
+            | 모든 글
+    
+    .tab-body-block
+
+      .tab-body#post-menu-tab-body-archive
+        +archiveDateList()
+
+      .tab-body#post-menu-tab-body-category
+        +categoryList(site.categories)
+
+mixin postList(posts)
+  ul.post-list
+    each post in posts
+      li: +postItem(post)
+
+mixin postItem(post)
+  a.post-item(href=url_for(post.path)).ui-pressable-in
+    .post-item-info
+      h4.post-title= post.title
+      .post-meta
+        span.post-date= date(post.date)
+        //if post.categories !== 'undefined'
+        span.post-categories
+          each category in post.categories.data
+            span.post-category= category.name
+    .post-item-thumbnail
+
+mixin categoryList(categories, isIndexPage = false)
+  -
+    const showCurrent = true;
+    const showCount = true;
+    const depth = 4;
+
+    const prepareQuery = parent => {
+      const query = {};
+
+      if (parent) {
+        query.parent = parent;
+      } else {
+        query.parent = {$exists: false};
+      }
+
+      return categories.find(query);
+    };
+
+    const hCategoryList = (level, parent) => {
+      let result = '';
+
+      prepareQuery(parent).forEach((category, index) => {
+        let child;
+        if (!depth || level + 1 < depth) {
+          child = hCategoryList(level + 1, category._id);
+        }
+
+        /*let isCurrent = false;
+        if (showCurrent && page) {
+          for (let j = 0; j < category.length; j++) {
+            const post = category.posts.data[j];
+            if (post && post._id === page._id) {
+              isCurrent = true;
+              break;
+            }
+          }
+
+          // special case: category page
+          //isCurrent = isCurrent || (page.base && page.base.startsWith(category.path));
+          isCurrent = isCurrent || (page.base == category.path);
+        }*/
+
+        let isCurrent = false;//showCurrent && is_category(category.name);
+        if(showCurrent) {
+          if(page._id) { //Article
+            for (let j = 0; j < category.length; j++) {
+              const post = category.posts.data[j];
+              console.log(`Post: ${post._id}, Page: ${page._id}`);
+              if (post && post._id === page._id) {
+                isCurrent = true;
+                break;
+              }
+            }
+          }
+
+          //Article List (Index)
+          isCurrent = isCurrent || (page.base && page.base === category.path);
+        }
+
+
+        result += `<li class="category-entry category-level-${level}${isCurrent ? ' active' : ''}">`;
+
+        result += `<a class="category-entry-link ui-pressable--dim" href="${url_for(category.path)}">`;
+        result += category.name
+
+        if (showCount) {
+          result += `<span class="category-entry-count">(${category.length})</span>`;
+        }
+
+        result += '</a>';
+
+        if (child) {
+          result += `<ul class="category-entry-child">${child}</ul>`;
+        }
+
+        result += '</li>';
+      });
+
+      return result;
+    };
+    const __list = hCategoryList(0);
+
+  ul.categories.ui-surface
+    != __list
+
+mixin archiveDateList
+  
+  -
+    const showCurrent = true;
+    const showCount = true;
+
+    const hArchiveList = () => {
+      //const compareYear = (yearA, monthA, yearB, monthB) => yearA === yearB;
+      //const compareMonth = (yearA, monthA, yearB, monthB) => yearA === yearB && monthA === monthB;
+
+      let result = '';
+      
+      const posts = site.posts.sort('date', -1);
+      if(!posts.length) return result;
+
+      const data = [];
+      let length = 0; 
+
+      posts.forEach(post => {
+        if(post.no_date) return;
+
+        // Clone the date object to avoid pollution
+        let date = post.date.clone();
+
+        if (config.timezone) date = date.tz(timezone);
+
+        const year = date.year();
+        const month = date.month() + 1;
+        const lastData = data[length - 1];
+        
+        if (!lastData || lastData.year !== year || lastData.month !== month) {
+          //if (lang) date = date.locale(lang);
+          //const name = date.format(format);
+          length = data.push({
+            year,
+            month,
+            count: 1
+          });
+        } else {
+          lastData.count++;
+        }
+      });
+
+      const link = item => {
+        let url = `${config.archive_dir}/${item.year}/`;
+
+        //if (type === 'monthly') {
+          if (item.month < 10) url += '0';
+          url += `${item.month}/`;
+        //}
+
+        return url_for(url);
+      };
+
+      // Rendering
+      result += `<ul class="arcdates ui-surface">`;
+
+      for (let i = 0, len = data.length; i < len; i++) {
+        const item = data[i];
+
+        const isCurrent = showCurrent && page.archive && page.year === item.year && page.month === item.month;
+
+        result += `<li class="arcdate-entry${isCurrent?' active':''}">`;
+
+        result += `<a class="arcdate-entry-link ui-pressable--dim" href="${link(item)}">`;
+        result += `${item.year}년 ${item.month}월`;
+
+        if (showCount) {
+          result += `<span class="arcdate-entry-count">(${item.count})</span>`;
+        }
+        
+        result += '</a>';
+
+        result += '</li>';
+      }
+
+      result += '</ul>';
+
+      return result;
+    };
+    const __list = hArchiveList();
+  //ul.categories
+  != __list

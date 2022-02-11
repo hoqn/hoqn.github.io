@@ -1,0 +1,41 @@
+-
+  const showCurrent = true;
+  const showCount = true;
+  const depth = 4;
+
+  const prepareQuery = (parent) => {
+    const query = {};
+
+    if (parent) {
+      query.parent = parent;
+    } else {
+      query.parent = {$exists: false};
+    }
+
+    return site.categories.find(query);
+  };
+
+  const act = (level, parent) => {
+    let result = [];
+
+    prepareQuery(parent).forEach((category, index) => {
+      let child;
+      if(!depth || level + 1 < depth) {
+        child = act(level + 1, category._id);
+      }
+
+      const isCurrent = showCurrent && is_category(category.name);
+
+      result.push({level: level, data: category});
+    });
+
+    return result;  
+  };
+  
+
+#categoryList
+  .menu
+    - const __list = act(0);
+    ul.menu-list
+      each category in __list
+        li: a= category.name

@@ -1,0 +1,69 @@
+mixin articleHeader(post)
+  .article-header
+    .inner
+      if post.categories
+        h4.article-categories
+          each category, index in post.categories.data
+            a(href=url_for(category.path)).ui-pressable--opacity= category.name
+            unless index == (post.categories.length - 1)
+              span.separator &#xE001;
+      div.article-head-date
+        = date(post.date, 'YYYY. MM. DD.') + "에 작성"
+        = " / "
+        = date(post.update, 'YYYY. MM. DD.') + "에 수정"
+      h2.article-title
+        = post.title
+      if post.subtitle
+        h3.article-subtitle
+          = post.subtitle
+
+mixin articleBody(post)
+  .article-body
+    .inner.markdown-body
+      != post.content
+
+mixin articleSidebar(post, options)
+  if options.toc || options.date
+    .article-sidebar#article-sidebar
+      .inner
+        .sidebar-container.ui-surface
+          +articleHeadWidget(post)
+          if options.toc
+            +articleTocWidget(post)
+  
+
+mixin articleHeadWidget(post)
+  .article-widget-head
+    unless post.no_date
+      .h-date
+        .h-date-write
+          ion-icon(name="document")
+          span= date(post.date, 'YYYY. MM. DD.')
+        if post.update
+          .h-date-update
+            ion-icon(name="cut")
+            span= date(post.update, 'YYYY. MM. DD.')
+    .h-title
+      if post.categories
+        .h-title-category
+          each category in post.categories.data
+            span= category.name
+      .h-title-title= post.title
+
+mixin articleTocWidget(post)
+  //-
+    const toc = {
+      "1. 개요": {},
+      "2. 기획": {
+        "2.1. 타겟": {}, "2.2. 주요 기능": {}
+      },
+      "3. 테스트": {}
+    };
+  //.article-widget-toc
+    each item, index in toc
+      .toc-item
+        .toc-cur= index
+
+  .article-widget-toc
+    != toc(post.content, {'list_number': false, max_depth: 2})
+    

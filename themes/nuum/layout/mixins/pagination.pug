@@ -1,0 +1,12 @@
+mixin pagination(page)
+  - css('css/pagination.css')
+  .pagination
+    != paginator({prev_text: '&#xE000;', next_text: '&#xE001;', escape: false})
+  //- const link = (number) => `page/${number}`
+  //table.pagination-table
+    tbody
+      tr
+        - let num = 1
+        while num <= page.total
+          td.pagination-item(class={"active": page.current===num})
+            a.pagination-item-link(href=link(num))= num++

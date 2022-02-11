@@ -1,0 +1,13 @@
+include _partials/main_head
+
+section.section
+  .container
+    .columns
+      
+      aside.column.is-4
+        include _partials/article_list_tabs
+        +ArticleListTabs('category')
+        include _partials/category_list
+
+      .column
+        include _partials/article_list

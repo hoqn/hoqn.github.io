@@ -1,0 +1,143 @@
+:root {
+  --nav-color-background: #fcfcfcf0;
+  --nav-color-border: var(--color-background-dimmed);
+  --nav-color-on-background: black;
+}
+
+:root[dark] {
+  --nav-color-background: #27292ef0;
+  --nav-color-border: var(--color-background-dimmed);
+  --nav-color-on-background: white;
+}
+
+nav.--transparent {
+  //background-color: transparent;
+  border: none;
+  .title {
+    display: none;
+  }
+}
+
+nav {
+  width: 100%;
+  height: 56px;
+  min-height: 56px;
+  .title {
+    padding: 0 12px;
+  }
+  .title>img {
+    vertical-align: middle;
+  }
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: var(--nav-color-background);
+  border-bottom: 1px solid var(--nav-color-border);
+  box-sizing: content-box;
+}
+
+nav .title {
+  float: left;
+  font-family: 'Spoqa Han Sans Neo', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: var(--nav-color-on-background)!important;
+  line-height: 56px;
+  @at-root:root[dark] & > img {
+    filter: invert(1);
+  }
+}
+
+
+nav .nav-hand {
+  position: absolute;
+  display: none;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+nav .nav-items {
+  float: right;
+  text-align: right;
+}
+
+nav .nav-items {
+  --nav-color-active: var(--nav-color-on-background);
+}
+
+nav .nav-items.nav-colored {
+  --nav-color-active: var(--color-primary-dark);
+}
+
+nav .nav-item {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 56px;
+  vertical-align: middle;
+  color: var(--nav-color-on-background);
+  opacity: .87;
+}
+
+nav .nav-item .nav-link {
+  display: inline-block;
+  padding: 0 12px;
+}
+
+nav .nav-item .nav-indicator {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 12px;
+  height: 2px;
+  margin: 0 8px;
+  border-radius: 0 0 1px 1px;
+  background-color: transparent;
+  opacity: .625;
+}
+
+nav .nav-item.active {
+  font-weight: bold;
+  color: var(--nav-color-active);
+  opacity: 1;
+}
+
+nav .nav-item.active .nav-indicator {
+  /*background-color: var(--nav-text-color);*/
+  background-color: var(--nav-color-active);
+}
+
+nav .nav-item-icon,
+nav .nav-item-search {
+  font-size: 24px;
+}
+
+nav .nav-item ion-icon {
+  vertical-align: middle;
+  font-size: 20px;
+}
+
+nav .nav-mode-switch {
+  display: inline-block;
+  padding: 0 12px;
+  cursor: pointer;
+}
+
+:root nav .nav-mode-switch>.nav-dark,
+:root[dark] nav .nav-mode-switch>.nav-light {
+  display: none;
+}
+
+:root[dark] nav .nav-mode-switch>.nav-dark,
+:root nav .nav-mode-switch>.nav-light {
+  display: inline-block;
+}

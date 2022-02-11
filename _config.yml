@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 전호균의 블로그
+title: hoqn_dev
 subtitle: 
 description: 전호균의 블로그입니다. 개발과 UI/UX 디자인을 주로 다룹니다.
 keywords:
@@ -13,7 +13,7 @@ timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://hoqn.github.io
+url: http://hoqn.net
 permalink: :year/:title/
 permalink_defaults:
 pretty_urls:
@@ -46,10 +46,10 @@ future: true
 highlight:
   enable: true
   line_number: false
-  auto_detect: false
+  auto_detect: true
   tab_replace: ''
-  wrap: true
-  hljs: false
+  wrap: false
+  hljs: true
 prismjs:
   enable: false
   preprocess: true
@@ -97,14 +97,18 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: Hinaus
+theme: nuum
+node_sass:
+  outputStyle: nested
+  precision: 5
+  sourceComments: false
 #landscape
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/dzonhog/dzonhog.github.io.git
+  repo: https://github.com/hoqn/dev.git
   branch: master
   message: "Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}"
 

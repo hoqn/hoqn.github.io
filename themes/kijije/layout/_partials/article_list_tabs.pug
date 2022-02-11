@@ -1,0 +1,6 @@
+mixin ArticleListTabs(location)
+  .tabs.is-toggle.is-fullwidth.is-link
+    ul 
+      //- li(class= {'is-active' : location === 'archive'}): a 날짜
+      li(class= {'is-active' : location === 'category'}): a 카테고리
+      li(class= {'is-active' : location === 'tag'}): a 태그

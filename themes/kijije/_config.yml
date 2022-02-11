@@ -1,0 +1,11 @@
+title: 'Hogyun Jeon'
+
+nav:
+  brand_logo: /images/brand_logo.svg
+  hero_menu:
+    포트폴리오: https://portfolio.hoqn.net
+    프로젝트: https://projects.hoqn.net
+    블로그: /archives
+covers:
+  profile:
+    image: /images/profile_image.png

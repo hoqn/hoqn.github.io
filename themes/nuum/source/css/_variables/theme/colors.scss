@@ -1,0 +1,11 @@
+@import "./colors-light";
+@import "./colors-dark";
+
+:root {
+  color-scheme: light;
+  @include colors-light;
+}
+:root[dark] {
+  color-scheme: dark;
+  @include colors-dark;
+}

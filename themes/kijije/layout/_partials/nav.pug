@@ -1,0 +1,20 @@
+nav#gnb.navbar(role="navigation" aria-label="main navigation").is-fixed-top.is-transparent
+  .container
+    .navbar-brand
+      a.navbar-item(href="/").pressable-opacity
+        img(src=theme.nav.brand_logo)
+      a.navbar-burger(role="button" aria-label="menu" aria-expanded="false" data-target="gnbMenu")
+        span(aria-hidden="true")
+        span(aria-hidden="true")
+        span(aria-hidden="true")
+
+    .navbar-start
+      .navbar-menu#gnbMenu
+        .navbar-item
+          p.control 
+            a.button.is-text
+              span.icon: ion-icon(name="sunny")
+            a.button.is-text
+              span.icon: ion-icon(name="moon")
+
+script(src="/js/navbar.js") 

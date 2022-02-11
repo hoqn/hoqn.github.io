@@ -1,0 +1,10 @@
+index:
+  latest_posts: Latest Posts
+
+category:
+  all: All Categories
+  categories: Categories
+
+archive:
+  archives: Archives
+  all: All Archives

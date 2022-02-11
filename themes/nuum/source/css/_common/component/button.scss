@@ -1,0 +1,68 @@
+.ui-pressable {
+  transition-duration: $transition-duration-f;
+  
+  &--dim {
+    @extend .ui-pressable;
+    &:hover, &:focus {
+      filter: brightness(.93);
+    }
+    &:active {
+      filter: brightness(.85);
+    }
+  }
+  &--opacity {
+    @extend .ui-pressable;
+    &:hover, &:focus {
+      opacity: .67;
+    }
+    &:active {
+      opacity: .32;
+    }
+  }
+  &--in {
+    @extend .ui-pressable--dim
+  }
+}
+
+.ui-button {
+  display: inline-block;
+  min-height: 32px;
+  padding: 8px 16px;
+  
+  color: var(--color-on-base);
+  background-color: var(--color-base);
+  border: 1px solid var(--color-button-outline);
+  border-radius: $border-radius-sm;
+
+  font-size: .875rem;
+  line-height: 16px;
+
+  transition-duration: $transition-duration-f;
+
+  // Variations
+  &--primary {
+    @extend .ui-button;
+    color: var(--color-on-primary);
+    background-color: var(--color-primary);
+    border: 1px solid var(--color-button-outline);
+  }
+  &--outlined {
+    @extend .ui-button;
+    color: inherit;
+    background-color: transparent;
+    border: 1px solid var(--color-button-outline);
+  }
+
+  // Actions
+  &:hover,
+  &:focus {
+    filter: brightness(.92) hue-rotate(3deg);
+  }
+  &:active {
+    filter: brightness(.81) hue-rotate(7deg);
+  }
+
+  >* {
+    vertical-align: middle;
+  }
+}

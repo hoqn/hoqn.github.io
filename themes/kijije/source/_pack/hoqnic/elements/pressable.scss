@@ -1,0 +1,21 @@
+.hq-pressable {
+  transition-duration: .12s;
+  &.hq--dim {
+    &:hover, &:focus {
+      background-color: inherit;
+      filter: brightness(.93);
+    }
+    &:active {
+      background-color: inherit;
+      filter: brightness(.85);
+    }
+  }
+  &.hq--opacity {
+    &:hover, &:focus {
+      opacity: .67;
+    }
+    &:active {
+      opacity: .32;
+    }
+  }
+}

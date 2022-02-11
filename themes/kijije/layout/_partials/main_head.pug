@@ -1,0 +1,12 @@
+section.hero.is-small#mainHead
+  .hero-body
+    .container.has-text-centered
+      .block: a(href="/").pressable-opacity: img.hero-brandlogo(src=theme.nav.brand_logo)
+      .block: p 전호균
+  .hero-foot
+    .container
+      nav.tabs.is-centered
+        ul
+          each item, key in theme.nav.hero_menu
+            li: a(href=item).pressable-opacity= key
+    hr.mb-0

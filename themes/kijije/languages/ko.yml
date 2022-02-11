@@ -1,0 +1,10 @@
+index:
+  latest_posts: 최근 글
+
+category:
+  all: 모든 카테고리
+  categories: 카테고리
+
+archive:
+  archives: 아카이브
+  all: 모든 아카이브

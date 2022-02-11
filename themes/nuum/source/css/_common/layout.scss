@@ -1,0 +1,11 @@
+.inner,
+.container {
+  max-width: $container-width;
+  margin: auto;
+  padding: 0 $container-padding-horizontal;
+  box-sizing: content-box;
+  &--sm {
+    @extend .container;
+    max-width: $container-width-sm;
+  }
+}

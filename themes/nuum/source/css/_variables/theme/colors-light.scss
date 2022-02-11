@@ -1,0 +1,20 @@
+@mixin colors-light {
+  --color-background: #fcfcfc;
+  --color-background-dimmed: #eaeaea;
+  --color-on-background: #333333;
+
+  --color-surface: white;
+  --color-surface-dimmed: #f3f3f3;
+  --color-on-surface: #2e2e2e;
+
+  --color-primary: #2d4deb;
+  --color-primary-dimmed: #1939d7;
+  --color-primary-dark: #1939d7;
+  --color-on-primary: white;
+
+  --color-base: #ededed;
+  --color-base-dimmed: #dedede;
+  --color-on-base: var(--color-on-background);
+
+  --color-button-outline: #7070704f;
+}

@@ -1,0 +1,40 @@
+extends ../_scaffold/layout
+
+include ../mixins/post
+include ../mixins/pagination
+
+block main
+  .container
+    section.category-list-section.t-p
+      .details-grid
+        .details-category
+          .details-header
+            .details-header-top
+              a.close-menu.ui-pressable-in
+                span 글 목록 &#xE001;
+                //ion-icon(name="menu")
+            h2.details-title: block left-title
+            //카테고리
+          .details-body
+            block left-body
+              //+categoryList(site.categories, true)
+              ////+postMenuTab()
+              //+archiveDateList()
+              //+categoryList(site.categories, false)
+        .details-post
+          .details-header
+            .details-header-top
+              a.expand-menu.ui-pressable-in
+                //ion-icon(name="menu")
+                span &#xE000; 아카이브·카테고리
+            h2.details-title
+              block right-title
+            //= __('category.all_posts')
+          .details-body
+            block right-body
+              //+postList(page.posts?page.posts.data:site.posts.data)
+              +postList(page.posts.data)
+              +pagination(page)
+
+block scripts
+  script(type="text/javascript", src=url_for('js/posts.js'))

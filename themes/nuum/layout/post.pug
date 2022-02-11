@@ -1,0 +1,17 @@
+extends ./_scaffold/layout
+
+include mixins/article
+
+//-
+  block lnb
+  .lnb-container
+    .lnb.article-lnb.ui-surface
+      h4.lnb-title.text--md= page.title
+
+block main
+  .article-container
+    +articleHeader(page)
+    .divider.horizontal
+    .article-dis
+      +articleSidebar(page, {toc: page.toc, date: !page.no_date})
+      +articleBody(page)

@@ -1,0 +1,38 @@
+extends _scaffold/layout
+include mixins/post
+
+block main
+  include _partial/MainHead
+    .container 
+
+
+  //- section.hero-section
+    .hero-title-field
+      h4!= theme.index.hero.subtitle
+      h2!= theme.index.hero.title
+    .hero-social-items
+      if theme.index.hero.nickname
+        a.hero-social-name.ui-button--primary(href=theme.index.hero.nickname_link) @!{theme.index.hero.nickname}
+      each itemv, itemi in theme.index.hero.social
+        a.hero-social-item.ui-button(href=itemv)
+          ion-icon.hero-social-icon(name="logo-"+itemi)
+          span= itemi
+
+  section.index-profile-section
+    .container
+      .items-container
+        img(src=theme.index.profile.img)
+        h1= theme.index.profile.h1
+        h2= theme.index.profile.h2
+        h3= theme.index.profile.h3
+
+  section.post-list-section
+    .section-header
+      .content
+        h2.section-title= __('index.latest_posts')
+    .section-body
+      .content
+        +postList(page.posts.data)
+
+block style
+  != css('css/index')

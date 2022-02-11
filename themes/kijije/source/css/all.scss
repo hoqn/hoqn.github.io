@@ -1,0 +1,22 @@
+* {
+  font-family: 'Spoqa Han Sans Neo', sans-serif;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@import '../_pack/hoqnic.sass';
+
+@import './_partials/main_head.scss';
+
+
+.pressable-opacity {
+  transition-duration: .12s;
+  &:hover {
+    opacity: .5;
+  }
+  &:active {
+    opacity: .25;
+  }
+}

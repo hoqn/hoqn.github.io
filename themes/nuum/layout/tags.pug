@@ -1,0 +1,11 @@
+.post-container
+  article.post-article
+    .post-head
+      .post-inner
+        .post-meta
+          unless page.no_date
+            span.post-date#post-date= date(page.date, 'YYYY년 M월 D일')
+        h2.post-title= page.title
+    .post-body
+      .post-inner
+        .post-content.markdown-body!= page.content

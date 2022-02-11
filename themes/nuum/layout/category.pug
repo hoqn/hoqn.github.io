@@ -1,0 +1,47 @@
+extends _partial/post-list
+
+include mixins/post
+
+block left-title
+  | 블로그
+  //= __('category.categories')
+
+//-
+  block left-body
+  +postMenuTab(false, false)
+  +categoryList(site.categories)
+block left-body
+  +postMenuTab(1)
+
+block right-title
+  -
+    //let detitle = '';
+    const slug = page.base.split('/');
+    /*if(slug.length > 1) {
+      detitle = slug.slice(1, slug.length-1).join('&#xE001;');
+    }*/
+  each sit, index in slug
+    if index > 0 && index < slug.length-2
+      span.pre-title= slug[index]
+  //= page.category
+  //= page.path
+  //!= detitle
+  = page.category
+//-
+  include mixins/post
+
+  .container
+  section.category-list-section.t-p
+    .details-grid
+      .details-category
+        .details-header
+          h2.details-title 카테고리
+        .details-body
+          //!= list_categories(site.categories, {class: "category", transform(str) { return titlecase(str); }})
+          +categoryList(site.categories)
+          //+categoryList(site.categories)
+      .details-post
+        .details-header
+          h2.details-title= page.category
+        .details-body
+          +postList(page.posts.data)
