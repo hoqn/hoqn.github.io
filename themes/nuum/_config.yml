@@ -47,7 +47,7 @@ nav:
   items:
     # these items will display as a link
     소개: /about
-    프로젝트: /projects
+    #프로젝트: /projects
     블로그: /archives
     # these will be automatically be an icon
     GitHub: https://github.com/hoqn

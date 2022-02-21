@@ -21,6 +21,7 @@ mixin articleBody(post)
   .article-body
     .inner.markdown-body
       != post.content
+  include ../_partial/Comments
 
 mixin articleSidebar(post, options)
   if options.toc || options.date

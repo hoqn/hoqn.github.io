@@ -9,12 +9,6 @@
 
 nav#theme-nav
   .inner
-    a.title(href="/").ui-pressable--opacity
-      if theme.nav.logo != null
-        img(src=theme.nav.logo)
-      else
-        theme.nav.title
-    a.nav-hand.ui-pressable--opacity: .nav-hand-indicator
     .nav-items(class= {"nav-colored": theme.nav.colored_nav_items})
       each itemv, itemi in theme.nav.items
         if itemi == 'GitHub'
@@ -22,7 +16,7 @@ nav#theme-nav
             a.nav-link(href = url_for(itemv)).ui-pressable--opacity: ion-icon(name=icons.github)
         else
           //- var act = !(/^(http|https):\/\/*/gi).test(itemv) && "/"+page.path === itemv + "/index.html"
-          .nav-item(class={active: is_current(url_for(itemv))})
+          .nav-item(class={active: is_current(url_for(itemv) )})
             a.nav-link(href = url_for(itemv)).ui-pressable--opacity
               = itemi
               span.nav-indicator
@@ -31,3 +25,9 @@ nav#theme-nav
           a.nav-mode-switch.ui-pressable--opacity
             ion-icon.nav-dark(name=icons.dark)
             ion-icon.nav-light(name=icons.light)
+    a.title(href="/").ui-pressable--opacity
+      if theme.nav.logo != null
+        img(src=theme.nav.logo)
+      else
+        theme.nav.title
+    a.nav-hand.ui-pressable--opacity: .nav-hand-indicator
