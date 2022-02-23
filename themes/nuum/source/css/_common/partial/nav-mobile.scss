@@ -2,8 +2,7 @@
   display: none;
 }
 
-@media screen and (max-width: 768px){
-
+@media screen and (max-width: 768px) {
   main {
     padding-top: $gnb-height-min;
   }
@@ -11,7 +10,7 @@
   nav {
     min-height: $gnb-height-min;
     height: $gnb-height-min;
-    transition: height .6s cubic-bezier(0.86, 0, 0.18, 1);
+    transition: height 0.6s cubic-bezier(0.86, 0, 0.18, 1);
   }
 
   nav .inner {
@@ -34,7 +33,7 @@
     font-size: $text-size--xs;
     top: -4px;
     font-weight: normal;
-    transition-delay: .2s;
+    transition-delay: 0.2s;
   }
 
   nav .nav-hand {
@@ -44,7 +43,6 @@
     cursor: pointer;
   }
 
-  
   nav.open .title {
     font-size: $text-size--md;
     font-weight: bold;
@@ -67,8 +65,8 @@
     position: inherit;
     bottom: 0;
     width: 100%;
-    transition-duration: .6s;
-    opacity: .875;
+    transition-duration: 0.6s;
+    opacity: 0.875;
   }
 
   nav .nav-hand-indicator::before,
@@ -80,9 +78,9 @@
     width: 20px;
     height: 2px;
     left: 50%;
+    transition-duration: 0.5s;
   }
 
-  
   nav .nav-hand-indicator::before {
     transform: rotate(15deg) translateX(0px);
     transform-origin: 100% 100%;
@@ -91,9 +89,32 @@
     transform: rotate(-15deg) translateX(0px);
     transform-origin: 0 100%;
   }
+  nav.--transparent {
+    .nav-hand-indicator {
+      &::before {
+        transform: rotate(0deg) translateY(-16px-2px) translateX(50%);
+      }
+      &::after {
+        transform: rotate(0deg) translateY(-16+2px) translateX(-50%);
+      }
+    }
+  }
 
-  nav.open .nav-hand-indicator {
-    transform: scaleY(-100%);
+  nav.open {
+    .title {
+      opacity: 1;
+    }
+    .nav-hand-indicator {
+      transform: translateY(-50%) scaleY(-100%);
+      &::before {
+        transform: rotate(15deg) translateX(0px);
+        transform-origin: 100% 100%;
+      }
+      &::after {
+        transform: rotate(-15deg) translateX(0px);
+        transform-origin: 0 100%;
+      }
+    }
   }
 
   nav .nav-items {
@@ -131,9 +152,9 @@
     display: block;
     overflow-y: scroll;
     opacity: 0;
-    transition-duration: .2s;
+    transition-duration: 0.2s;
     transform: translateY(-100%);
-    transition: all .6s cubic-bezier(0.86, 0, 0.18, 1);
+    transition: all 0.6s cubic-bezier(0.86, 0, 0.18, 1);
   }
 
   nav.open .nav-items {
@@ -170,5 +191,4 @@
   nav.open~.lnb-container {
     opacity: 0;
   }*/
-
 }
