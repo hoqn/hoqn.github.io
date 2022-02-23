@@ -25,7 +25,7 @@ footer .links .group {
     margin-right: 16px;
     
     &::after {
-     content: "\E001";
+    content: "\E001";
      opacity: .375;
      margin-left: 8px;
    }
@@ -33,7 +33,7 @@ footer .links .group {
   .item {
     font-size: .875rem;
     &:not(:last-child):after {
-      content: "\E001";
+      content: "|";
       opacity: .375;
       margin: 0 8px;
     }

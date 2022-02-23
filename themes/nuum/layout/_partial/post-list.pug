@@ -33,7 +33,7 @@ block main
           .details-body
             block right-body
               //+postList(page.posts?page.posts.data:site.posts.data)
-              +postList(page.posts.data)
+              +postList(page.posts? page.posts.data : [])
               +pagination(page)
 
 block scripts

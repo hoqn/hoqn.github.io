@@ -1,0 +1,21 @@
+:root:not([dark]) {
+  .comment-light {
+    display: block;
+  }
+  .comment-dark {
+    display: none;
+  }
+}
+:root[dark] {
+  .comment-light {
+    display: none;
+  }
+  .comment-dark {
+    display: block;
+  }
+}
+
+.utterances {
+  box-sizing: content-box;
+  max-width: $container-width-sm;
+}

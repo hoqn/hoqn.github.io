@@ -7,11 +7,6 @@ manifest: /manifest.json
 # show excerpt on post list
 show_excerpt: false
 
-main_head:
-  menu:
-    포트폴리오: https://portfolio.hoqn.net
-    GitHub: https://github.com/hoqn
-
 # index page config
 index:
   # hero section
@@ -20,7 +15,7 @@ index:
     title: <a href="/about">전호균</a>의 개발/디자인 블로그입니다. # 메인 타이틀입니다.
     #
     subtitle: Hogyun Jeon's Development/Designing Blog #서브 타이틀입니다.
-    # 
+    #
     nickname: hoqn # yournickname
     #
     nickname_link: /about
@@ -28,8 +23,8 @@ index:
     social:
       GitHub: https://github.com/hoqn
       Instagram: https://instagram.com/exhogyun
-      # LinkedIn: https://linkedin.com/ 
-  
+      # LinkedIn: https://linkedin.com/
+
   profile:
     img: /theme-img/profile-img.png
     h1: 전호균
@@ -49,8 +44,10 @@ nav:
     소개: /about
     #프로젝트: /projects
     블로그: /archives
+    포트폴리오: https://portfolio.hoqn.net
+  social:
     # these will be automatically be an icon
-    GitHub: https://github.com/hoqn
+    github: https://github.com/hoqn
   # whether to show the dark mode swtich
   show_dark_mode_switch: true
   # whether to show the search button in the upper right corner
@@ -71,8 +68,7 @@ footer:
       GitHub: https://github.com/hoqn
       Email: mailto:akzm9999@gmail.com
   # copyright
-  infotext:
-    <strong>전호균</strong>이 💙를 담아 만들었습니다.<br>
+  infotext: <strong>전호균</strong>이 💙를 담아 만들었습니다.<br>
     테마는 따로 공유하진 않습니다.<br>
     <br>
     Copyright © JEON Hogyun 2020-2021.<br>
@@ -82,5 +78,4 @@ footer:
 license: CC BY-NC 4.0
 # the link of your license
 license_link: https://creativecommons.org/licenses/by-nc/4.0
-
 # REMEMBER TO EDIT THIS BEFORE DEPLOY!!!

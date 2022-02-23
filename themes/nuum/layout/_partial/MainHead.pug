@@ -4,10 +4,10 @@ section.main-head#main-head
     a.profile-logo.ui-pressable--opacity(href="/"): img(src=theme.nav.logo)
     .profile-subtitle 전호균
   
-  if(theme.main_head.menu)
+  if(theme.nav.items)
     .menu-container 
       ul 
-        each value, key in theme.main_head.menu
+        each value, key in theme.nav.items
           li: a(href=value).ui-pressable--opacity= key
 
 != css('css/main_head')

@@ -14,7 +14,6 @@ hand.addEventListener('click', (e)=>{
   document.documentElement.style.overflowY = op? 'hidden':'scroll';
 });
 
-
 /* Main Head & Transparent*/
 window.addEventListener("load", function() {
   //(() => {

@@ -41,7 +41,8 @@ section .section-header.t-p {
 }
 
 section .section-header>.content,
-section .section-body>.content {
+section .section-body>.content,
+section .section-footer>.content {
   max-width: 936px;
   margin: 0 auto;
   padding: 0 16px;

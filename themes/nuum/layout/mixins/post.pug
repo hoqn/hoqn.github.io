@@ -48,7 +48,7 @@ mixin postList(posts)
       li: +postItem(post)
 
 mixin postItem(post)
-  a.post-item(href=url_for(post.path)).ui-pressable-in
+  a.post-item(href=url_for(post.path)).ui-surface--pressable
     .post-item-info
       h4.post-title= post.title
       .post-meta

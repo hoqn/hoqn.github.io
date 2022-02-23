@@ -15,17 +15,17 @@ block left-body
 
 block right-title
   -
-    //let detitle = '';
-    const slug = page.base.split('/');
+    const slug = page.base ? page.base.split('/') : '';
+    //- let detitle = '';
     /*if(slug.length > 1) {
       detitle = slug.slice(1, slug.length-1).join('&#xE001;');
     }*/
   each sit, index in slug
     if index > 0 && index < slug.length-2
       span.pre-title= slug[index]
-  //= page.category
-  //= page.path
-  //!= detitle
+  //- = page.category
+  //- = page.path
+  //- != detitle
   = page.category
 //-
   include mixins/post

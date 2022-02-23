@@ -5,6 +5,7 @@
 
 // Common Elements
 @import "./_common/common";
+@import "./_common/partial/preloader";
 @import "./_common/partial/nav";
 @import "./_common/partial/nav-mobile";
 
@@ -15,3 +16,4 @@
 
 // for Each Layouts
 @import "./_layout/post";
+@import "./_common/partial/Comments";

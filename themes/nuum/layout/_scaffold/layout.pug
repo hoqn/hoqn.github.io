@@ -1,14 +1,17 @@
 doctype html
 html(lang=config.language)
-  
+
   head 
     include ./head
     block style
-    //-  link(href='/css/bootstrap.css', rel='stylesheet')
+    //-  link(href='/css/bootstrap.css' rel='stylesheet')
     script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
     script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
 
+
   body.p-lo
+    != js('js/colortheme.js')
+    include ../_partial/preloader
     header
       include ../_partial/nav
       block lnb
@@ -19,7 +22,7 @@ html(lang=config.language)
         include ./footer
     block scripts
     include ./scripts
-    
+
     style.
       body.p-lo {
         transition: none !important;

@@ -33,6 +33,12 @@ block main
     .section-body
       .content
         +postList(page.posts.data)
+    .section-footer 
+      .content
+        a(href=url_for('archives')).ui-surface--pressable.section-footer-button
+          span 더 읽기
+
+        
 
 block style
   != css('css/index')
