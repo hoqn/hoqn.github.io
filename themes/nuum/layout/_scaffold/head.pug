@@ -73,18 +73,25 @@ block title
   -
     let title = '';
     if(is_archive()) {
-      title = __('archive.all');
       if(is_month()) {
         title = `${page.year}/${page.month}`;
-      } else {
+      } else if(is_year()) {
         title = `${page.year}`;
+      } else {
+        title = __('archive.all');
       }
     } else if(is_category()) {
-      title = `${__('category.categories')}) ${page.category}`;
+      title = `${page.category}`;
     } else if(is_tag()) {
       title = `${__('tag')}) ${page.tag}`;
     } else if(is_post() || is_page()) {
       title = `${page.title}`;
+    }
+
+    if(title === '') {
+      title = config.title;
+    } else {
+      title =`${title} | ${config.title}`;
     }
   title= title
 
