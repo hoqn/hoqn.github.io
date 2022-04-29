@@ -793,7 +793,7 @@ nav .nav-mode-switch {
 
 .article-header .article-subtitle {
   margin: 4px 0 0 0;
-  position: absolute; }
+  position: relative; }
 
 .article-header .article-head-date {
   display: none;
