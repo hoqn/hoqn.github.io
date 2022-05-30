@@ -1,0 +1,74 @@
+:root {
+  color-scheme: light;
+  --color-background: white;
+  --color-surface: white;
+  --color-primary: #0E2FA4;
+  --color-on-primary: white;
+  --color-primary-low: rgba(14, 47, 164, 0.05);
+  --color-on-background: black;
+  --color-divider: #EFEFEF;
+  --color-cover-card-shadow: rgba(14, 47, 164, 0.15); }
+
+:root[dark] {
+  color-scheme: dark;
+  --color-background: #1b2027;
+  --color-surface: #262a30;
+  --color-primary: #f1d05b;
+  --color-on-primary: black;
+  --color-primary-low: rgba(241, 208, 91, 0.05);
+  --color-on-background: white;
+  --color-divider: #303030;
+  --color-cover-card-shadow: rgba(39, 33, 12, 0.15); }
+
+:root[dark] .ui-brand-logo {
+  filter: invert(100%); }
+
+.nav {
+  height: 64px;
+  position: fixed;
+  top: 0;
+  background-color: inherit;
+  width: 100%;
+  z-index: 999; }
+  .nav .brand {
+    height: 32px; }
+  .nav .brand-logo {
+    box-sizing: border-box;
+    height: 32px; }
+
+.nav > .container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center; }
+
+.nav-main.--hide {
+  display: none; }
+
+.nav-article {
+  border-bottom: solid 2px var(--color-primary); }
+  .nav-article > .container {
+    justify-content: flex-start; }
+  .nav-article.--hide {
+    display: none; }
+  .nav-article .contents {
+    margin-left: 16px;
+    color: var(--color-primary);
+    max-lines: 1; }
+
+:root:not([dark]) #color-scheme-button-light {
+  display: inline-block; }
+
+:root:not([dark]) #color-scheme-button-dark {
+  display: none; }
+
+:root[dark] #color-scheme-button-light {
+  display: none; }
+
+:root[dark] #color-scheme-button-dark {
+  display: inline-block; }
+
+.nav-place {
+  display: block;
+  width: 100%;
+  height: 64px; }
