@@ -1,8 +1,6 @@
-<!DOCTYPE html><html lang="[&quot;ko&quot;,&quot;en&quot;,&quot;de&quot;,&quot;default&quot;]"><head> <meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"><title>알고리즘 정렬 - 삽입 정렬 | hoqn</title><link rel="shortcut icon" href="/favicon.png"><link rel="manifest" href="/manifest.json">
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>알고리즘 정렬 - 삽입 정렬 - HOQN</title><link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="/css/main.css">
-
-<link rel="stylesheet" href="/css/markdown.css">
-<link href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css" rel="stylesheet" type="text/css"><link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&amp;display=swap" rel="stylesheet"><script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script><script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><meta name="generator" content="Hexo 5.4.0"><style>mjx-container[jax="SVG"] {
+<link href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css" rel="stylesheet" type="text/css"><link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&amp;display=swap" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"><script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script><script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script><script src="/js/color-scheme.js"> </script><meta name="generator" content="Hexo 5.4.0"><style>mjx-container[jax="SVG"] {
   direction: ltr;
 }
 
@@ -114,14 +112,9 @@ mjx-container[display="true"] {
 mjx-container[display="true"] + br {
   display: none;
 }
-</style></head><body class="p-lo">
-<script src="/js/colortheme.js"></script>
-<div id="preloader"><div id="preloader-indicator"></div></div><script>window.addEventListener('load', () => {
-  document.getElementById('preloader').classList.add('--hidden');
-});</script><header><nav class="--transparent" id="theme-nav"><div class="inner"><a class="title ui-pressable--opacity hidden-when-top" href="/"><img src="/theme-img/logo.svg"></a><a class="nav-hand ui-pressable--opacity"><div class="nav-hand-indicator"></div></a><div class="nav-items"><div class="nav-item hidden-when-top"><a class="nav-link ui-pressable--opacity" href="/about">소개<span class="nav-indicator"></span></a></div><div class="nav-item hidden-when-top"><a class="nav-link ui-pressable--opacity" href="/archives">블로그<span class="nav-indicator"></span></a></div><div class="nav-item hidden-when-top"><a class="nav-link ui-pressable--opacity" target="_blank" rel="noopener" href="https://portfolio.hoqn.net">포트폴리오<span class="nav-indicator"></span></a></div><div class="nav-item nav-item-icon"><a class="nav-link ui-pressable--opacity" target="_blank" rel="noopener" href="https://github.com/hoqn"><ion-icon name="logo-github"></ion-icon></a></div><div class="nav-item"><a class="nav-mode-switch ui-pressable--opacity"><ion-icon class="nav-dark" name="moon"></ion-icon><ion-icon class="nav-light" name="sunny"></ion-icon></a></div></div></div></nav></header><main><div class="article-container"><section class="article-header" id="main-head"><div class="inner"><h4 class="article-categories"><a class="ui-pressable--opacity" href="/category/%EB%8C%80%ED%95%99/">대학</a><span class="separator">&#xE001;</span><a class="ui-pressable--opacity" href="/category/%EB%8C%80%ED%95%99/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/">알고리즘</a></h4><div class="article-head-date">2022. 05. 01.에 작성 / 2022. 05. 01.에 수정</div><h2 class="article-title">알고리즘 정렬 - 삽입 정렬</h2><h3 class="article-subtitle">Algorithm Sorting - Insertion Sort</h3></div></section><div class="divider horizontal"></div><div class="article-dis"><div class="article-sidebar" id="article-sidebar"><div class="inner"><div class="sidebar-container ui-surface"><div class="article-widget-head"><div class="h-date"><div class="h-date-write"><ion-icon name="document"></ion-icon><span>2022. 05. 01.</span></div></div><div class="h-title"><div class="h-title-category"><span>대학</span><span>알고리즘</span></div><div class="h-title-title">알고리즘 정렬 - 삽입 정렬</div></div></div><!--.article-widget-toceach item, index in toc
-  .toc-item
-    .toc-cur= index
---><div class="article-widget-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%EA%B0%9C%EB%85%90-%EB%B0%8F-%EB%8F%99%EC%9E%91"><span class="toc-text">개념 및 동작</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%EC%8B%9C%EC%9E%91-%EB%B3%B5%EC%9E%A1%EB%8F%84-%EB%B6%84%EC%84%9D"><span class="toc-text">시작 복잡도 분석</span></a></li></ol></div></div></div></div><div class="article-body"><div class="inner markdown-body"><p>※ 모든 정렬은 오름차순으로 진행한다고 가정</p>
+</style></head><body><nav class="ui-navbar --fixed" role="navigation"><div class="container"><div class="ui-navbar-left"><div class="ui-navbar-brand"><a class="ui-navbar-item ui-pressable --light" href="/"><img class="ui-brand-logo" src="/brand-logo.svg" alt="" srcset=""></a></div></div><div class="ui-navbar-right"><ul><li class="ui-navbar-item"><a class="ui-pressable --light" id="color-scheme-switch"><ion-icon id="color-scheme-button-dark" name="moon-outline" size="medium"></ion-icon><ion-icon id="color-scheme-button-light" name="sunny-outline" size="medium"></ion-icon></a></li><!--li.ui-navbar-item: a(href=url_for(config.archive_dir)).ui-pressable.--light 블로그--><!--li.ui-navbar-item: a(href=url_for("")).ui-pressable.--light 검색--></ul></div></div></nav><!--nav.nav.nav-main.container
+  a.brand(href=url_for('/')).ui-pressable.--light
+    img.brand-logo(src="/brand-logo-within.svg", alt="", srcset="")--><div class="ui-navbar-place"></div><section class="article-head"><div class="container"><h1 class="article-title ui-title-1">알고리즘 정렬 - 삽입 정렬</h1><h2 class="article-subtitle ui-subtitle-1">Algorithm Sorting - Insertion Sort</h2></div></section><section class="article-body"><div class="container"><div class="article-body-top"><span class="primary-color ui-text-bold"><a class="category-item" href="/category/%EB%8C%80%ED%95%99/">대학</a><a class="category-item" href="/category/%EB%8C%80%ED%95%99/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/">알고리즘</a></span><span>2022년 05월 01일</span></div><div class="article-body-content markdown-body"><p>※ 모든 정렬은 오름차순으로 진행한다고 가정</p>
 <p>※ 본 내용에 나오는 코드, 예제는 『Computer Algorithms, Introduction to Design and Analysis 3rd Ed.』(Sara Baase, Allen Van Gelder 저)를 참고하였음을 밝힙니다.</p>
 <h1 id="개념-및-동작"><a href="#개념-및-동작" class="headerlink" title="개념 및 동작"></a>개념 및 동작</h1><p>자료들의 모든 요소를 앞에서부터 탐색하며 이미 정렬된 부분과 비교하여 알맞은 위치를 찾아 삽입한다.</p>
 <h1 id="시작-복잡도-분석"><a href="#시작-복잡도-분석" class="headerlink" title="시작 복잡도 분석"></a>시작 복잡도 분석</h1><h3 id="Best"><a href="#Best" class="headerlink" title="Best"></a>Best</h3><p>이미 정렬되어 있을 때,<br><mjx-container class="MathJax" jax="SVG" display="true"><svg style="vertical-align: -0.186ex" xmlns="http://www.w3.org/2000/svg" width="5.254ex" height="1.692ex" role="img" focusable="false" viewBox="0 -666 2322.4 748"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mo" transform="translate(822.2,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mn" transform="translate(1822.4,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g></g></svg></mjx-container></p>
@@ -130,33 +123,4 @@ mjx-container[display="true"] + br {
 <ul>
 <li>i\right)\right)} \<br>&amp;\approx\frac{n^2}{4}\in\Theta(n^2)<br>\end{align}$$</li>
 </ul>
-</div></div><div class="comment-container"><div class="comment-light"><script src="https://utteranc.es/client.js" repo="hoqn/hoqn.github.io" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="async"></script></div><div class="comment-dark"><script src="https://utteranc.es/client.js" repo="hoqn/hoqn.github.io" issue-term="pathname" theme="github-dark" crossorigin="anonymous" async="async"></script></div></div></div></div></main><footer><!--<footer><div class="inner">
-    <div class="links">
-        <% for (const i in theme.footer) { %>
-        <div class="group">
-            <h4 class="title"><%= i %></h4>
-            <% for (const n in theme.footer[i]) { %>
-            <a href="<%- theme.footer[i][n] %>" class="item" target="_blank"><%= n %></a>
-            <% } %>
-        </div>
-        <% } %>
-    </div>
-    &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %><br />
-    <%= __('powered_by') %> <a href="http://hexo.io/" target="_blank">Hexo</a>
-</div>
-</footer>
---><div class="inner"> <div class="links"><div class="group"><h4 class="title">블로그</h4><a class="item ui-pressable--opacity" href="/about">소개</a><a class="item ui-pressable--opacity" href="/archives">블로그</a><a class="item ui-pressable--opacity" href="/projects">프로젝트</a><a class="item ui-pressable--opacity" href="/rss">RSS</a></div><div class="group"><h4 class="title">나</h4><a class="item ui-pressable--opacity" target="_blank" rel="noopener" href="https://github.com/hoqn">GitHub</a><a class="item ui-pressable--opacity" href="mailto:akzm9999@gmail.com">Email</a></div></div><div class="info"><span class="text"><strong>전호균</strong>이 💙를 담아 만들었습니다.<br> 테마는 따로 공유하진 않습니다.<br> <br> Copyright © JEON Hogyun 2020-2021.<br> All Rights Reserved.</span><!--img.img(src="/theme-img/github-mark-dark.png")--></div></div></footer>
-<script src="/js/main.js"></script>
-<script src="/js/local-search.js"></script>
-<script src="/js/nav.js"></script>
-<script src="/js/article.js"></script>
-<!-- Icons--><script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script><script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script><style>body.p-lo {
-  transition: none !important;
-  -o-transition: none !important;
-  -webkit-transition: none !important;
-  -ms-transition: none !important;
-  -moz-transition: none !important;
-}
-</style><script>window.addEventListener('load', (e) => {
-  document.body.classList.remove('p-lo');
-});</script></body></html>
+</div><div class="article-body-bottom"><span class="primary-color ui-text-bold">댓글</span><div class="comment-container"><div class="show-iff-light"><script src="https://utteranc.es/client.js" repo="hoqn/hoqn.github.io" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="async"></script></div><div class="show-iff-dark"><script src="https://utteranc.es/client.js" repo="hoqn/hoqn.github.io" issue-term="pathname" theme="github-dark" crossorigin="anonymous" async="async"></script></div></div></div></div></section></body><footer><div class="container py-4"><p></p>&copy; 2021-2022 | JEON Hogyun</div></footer></html>
